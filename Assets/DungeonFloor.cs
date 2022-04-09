@@ -20,10 +20,7 @@ public class DungeonFloor
     public bool IsTileValid(Vector2Int pos)
     {
         string tile = _layout[pos.y][pos.x];
-        if (tile is DungeonData.HEALTH_UPGRADE || tile is DungeonData.HEALTH_REFILL ||
-            tile is DungeonData.OXYGEN_UPGRADE || tile is DungeonData.OXYGEN_REFILL ||
-            tile is DungeonData.ENTRANCE || tile is DungeonData.EXIT || 
-            tile is DungeonData.EMPTY_SPACE)
+        if (!(tile is DungeonData.WALL))
         {
             return true;
         }
@@ -56,7 +53,7 @@ public class DungeonFloor
         return false;
     }
 
-    public bool PickupItem(Vector2Int pos)
+    public bool Interact(Vector2Int pos)
     {
         string tile = _layout[pos.y][pos.x];
         if (tile != null && !tile.Equals(""))
@@ -65,6 +62,7 @@ public class DungeonFloor
             {
                 case DungeonData.HEALTH_UPGRADE:
                     PlayerManager.Instance.MaxHealth += 10;
+                    _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                     break;
                 case DungeonData.HEALTH_REFILL:
                     PlayerManager.Instance.Health += 10;
@@ -72,22 +70,29 @@ public class DungeonFloor
                     {
                         PlayerManager.Instance.Health = PlayerManager.Instance.MaxHealth;
                     }
+                    _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                     break;
                 case DungeonData.OXYGEN_UPGRADE:
                     PlayerManager.Instance.MaxOxygen += 10;
+                    _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                     break;
                 case DungeonData.OXYGEN_REFILL:
                     if (PlayerManager.Instance.Oxygen > PlayerManager.Instance.MaxOxygen)
                     {
                         PlayerManager.Instance.Oxygen = PlayerManager.Instance.MaxOxygen;
                     }
+                    _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                     break;
+                case DungeonData.EXIT:
+                    return UseExit(pos);
+                case DungeonData.ENTRANCE:
+                    return UseEntrance(pos);
                 default:
                     return false;
                 //Collectibles cases
             }
 
-            _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
+            
             return true;
         }
 

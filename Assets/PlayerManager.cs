@@ -18,6 +18,16 @@ public class PlayerManager
         }
     }
 
+    private Vector2Int[] viewDirections = new[]
+    {
+        new Vector2Int(0,1),
+        new Vector2Int(1,0),
+        new Vector2Int(0,-1),
+        new Vector2Int(-1,0)
+    };
+
+    private int _viewDirection;
+
     public int Health;
     public int MaxHealth;
 
@@ -25,16 +35,38 @@ public class PlayerManager
     public int MaxOxygen;
 
     public Vector2Int Position;
+    public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
 
-    public bool Move(Vector2Int direction)
+    public bool Move(int direction)
     {
-        if (DungeonManager.Instance.CurrentFloor.IsTileValid(Position + direction))
+        direction = _viewDirection + direction;
+        direction = direction % 4;
+        if (DungeonManager.Instance.CurrentFloor.IsTileValid(Position + viewDirections[direction]))
         {
-            Position += direction;
-            DungeonManager.Instance.CurrentFloor.PickupItem(Position);
+            Position += viewDirections[direction];
+            DungeonManager.Instance.CurrentFloor.Interact(Position);
             return true;
         }
         return false;
+    }
+
+    public void Rotate(int direction)
+    {
+        if (direction > 0)
+        {
+            _viewDirection++;
+            if (_viewDirection > 3)
+            {
+                _viewDirection = 0;
+            }
+        }else if (direction < 0)
+        {
+            _viewDirection--;
+            if (_viewDirection < 0)
+            {
+                _viewDirection = 3;
+            }
+        }
     }
 
     public IEnumerator OxygenTimer()

@@ -3,6 +3,11 @@ using UnityEngine;
 
 public static class DungeonData
 {
+    public const int NORTH = 0;
+    public const int EAST = 1;
+    public const int SOUTH = 2;
+    public const int WEST = 3;
+    
     public const string EXIT = "exit";
     public const string ENTRANCE = "entrance";
     public const string WALL = "wll";
@@ -15,12 +20,23 @@ public static class DungeonData
     
     public static List<string[][]> InitialDungeonData = new List<string[][]>()
     {
-        Floor_1
+        Floor_1,
+        Floor_2
     };
     public static string[][] Floor_1 = new[]
     {
-        new []{"empty", "empty", "empty"},
-        new []{"empty", "empty", "empty"}
+        new []{"wll", "wll", "wll", "wll"},
+        new []{"wll", "spawn", "entrance", "wll"},
+        new []{"wll", "empty", "empty", "wll"},
+        new []{"wll", "wll", "wll", "wll"}
+    };
+    
+    public static string[][] Floor_2 = new[]
+    {
+        new []{"wll", "wll", "wll", "wll"},
+        new []{"wll", "exit", "empty", "wll"},
+        new []{"wll", "empty", "empty", "wll"},
+        new []{"wll", "wll", "wll", "wll"}
     };
 
     public static List<Ladder[]> LadderData = new List<Ladder[]>()
@@ -29,7 +45,7 @@ public static class DungeonData
     };
     public static Ladder[] Floor_1_Ladders = new[]
     {
-        new Ladder() {Entrance = new Vector2Int(0,0), Exit = new Vector2Int(1,1)}
+        new Ladder() {Entrance = new Vector2Int(2,1), Exit = new Vector2Int(1,1)}
     };
 
     public class Ladder
