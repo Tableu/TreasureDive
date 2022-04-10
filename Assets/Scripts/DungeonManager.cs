@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class DungeonManager
 {
@@ -27,21 +28,43 @@ public class DungeonManager
     private void Initialize()
     {
         _dungeonFloors = new List<DungeonFloor>();
+        int i = 0;
         foreach (string[][] floor in DungeonData.InitialDungeonData)
         {
-            _dungeonFloors.Add(new DungeonFloor(floor));
+            _dungeonFloors.Add(new DungeonFloor(floor, DungeonData.LadderData[i]));
+            if (i < DungeonData.LadderData.Count - 1)
+            {
+                i++;
+            }
         }
+        _currentFloor = _dungeonFloors[0];
     }
 
     public void MoveUpFloor()
     {
         _currentFloorIndex--;
-        _currentFloor = _dungeonFloors[_currentFloorIndex];
+        if (_currentFloorIndex >= 0)
+        {
+            _currentFloor = _dungeonFloors[_currentFloorIndex];
+            Debug.Log("Moving up a floor");
+        }
+        else
+        {
+            _currentFloorIndex++;
+        }
     }
 
     public void MoveDownFloor()
     {
         _currentFloorIndex++;
-        _currentFloor = _dungeonFloors[_currentFloorIndex];
+        if (_currentFloorIndex < _dungeonFloors.Count)
+        {
+            _currentFloor = _dungeonFloors[_currentFloorIndex];
+            Debug.Log("Moving down a floor");
+        }
+        else
+        {
+            _currentFloorIndex--;
+        }
     }
 }

@@ -34,7 +34,7 @@ public class PlayerManager
     public int Oxygen;
     public int MaxOxygen;
 
-    public Vector2Int Position;
+    public Vector2Int Position = new Vector2Int(1,1);
     public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
 
     public bool Move(int direction)
@@ -44,6 +44,7 @@ public class PlayerManager
         if (DungeonManager.Instance.CurrentFloor.IsTileValid(Position + viewDirections[direction]))
         {
             Position += viewDirections[direction];
+            Debug.Log("Moving " + viewDirections[direction]);
             DungeonManager.Instance.CurrentFloor.Interact(Position);
             return true;
         }
@@ -67,6 +68,7 @@ public class PlayerManager
                 _viewDirection = 3;
             }
         }
+        Debug.Log("Rotating " + _viewDirection);
     }
 
     public IEnumerator OxygenTimer()

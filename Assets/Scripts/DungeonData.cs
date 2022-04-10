@@ -20,32 +20,28 @@ public static class DungeonData
     
     public static List<string[][]> InitialDungeonData = new List<string[][]>()
     {
-        Floor_1,
-        Floor_2
-    };
-    public static string[][] Floor_1 = new[]
-    {
-        new []{"wll", "wll", "wll", "wll"},
-        new []{"wll", "spawn", "entrance", "wll"},
-        new []{"wll", "empty", "empty", "wll"},
-        new []{"wll", "wll", "wll", "wll"}
-    };
-    
-    public static string[][] Floor_2 = new[]
-    {
-        new []{"wll", "wll", "wll", "wll"},
-        new []{"wll", "exit", "empty", "wll"},
-        new []{"wll", "empty", "empty", "wll"},
-        new []{"wll", "wll", "wll", "wll"}
+        new[]
+        {
+            new []{"wll", "wll", "wll", "wll"},
+            new []{"wll", "spawn", "entrance", "wll"},
+            new []{"wll", "empty", "empty", "wll"},
+            new []{"wll", "wll", "wll", "wll"}
+        },
+        new[]
+        {
+            new []{"wll", "wll", "wll", "wll"},
+            new []{"wll", "exit", "empty", "wll"},
+            new []{"wll", "empty", "empty", "wll"},
+            new []{"wll", "wll", "wll", "wll"}
+        }
     };
 
     public static List<Ladder[]> LadderData = new List<Ladder[]>()
     {
-        Floor_1_Ladders
-    };
-    public static Ladder[] Floor_1_Ladders = new[]
-    {
-        new Ladder() {Entrance = new Vector2Int(2,1), Exit = new Vector2Int(1,1)}
+        new[]
+        {
+            new Ladder() {Entrance = new Vector2Int(2,1), Exit = new Vector2Int(1,1)}
+        }
     };
 
     public class Ladder
