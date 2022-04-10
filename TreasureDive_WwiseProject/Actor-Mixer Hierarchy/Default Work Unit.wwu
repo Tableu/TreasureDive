@@ -1,6 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D749588A-FDA6-4585-885B-FE0EF51D9888}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{D749588A-FDA6-4585-885B-FE0EF51D9888}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D749588A-FDA6-4585-885B-FE0EF51D9888}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Environment_Bubbles" ID="{5BD8CFA1-48DB-4AD9-ADE6-32E02D20D79C}" ShortID="366611395">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{01278555-EF63-475E-8458-955889C6464D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="1"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="env_bubbles_01" ID="{E30C6A64-FAEB-4695-BC4C-68CB917DD829}" ShortID="787999764">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles01" ID="{EB5BA8C3-796D-4E7C-94F9-D2646EFEDD97}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="800572091"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles01" ID="{EB5BA8C3-796D-4E7C-94F9-D2646EFEDD97}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="env_bubbles_02" ID="{3BF6BDB2-626A-4406-B4DB-CEC3073A5DFB}" ShortID="412173931">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles02" ID="{E4C1E45E-6C91-49E4-9E55-8902D4B60977}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="676645170"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles02" ID="{E4C1E45E-6C91-49E4-9E55-8902D4B60977}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="env_bubbles_03" ID="{D5D5ED90-A80B-4EF0-8AD2-AFB1C78EF23C}" ShortID="470453877">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles03" ID="{2459D162-DA78-4713-88EE-259324AF654F}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="869581343"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles03" ID="{2459D162-DA78-4713-88EE-259324AF654F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="env_bubbles_04" ID="{5E45C1C5-8E5F-49A7-BC15-A71229984702}" ShortID="1027858700">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles04" ID="{F9664F5E-B6DD-467C-986D-F63EAE96EAC9}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="868123595"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles04" ID="{F9664F5E-B6DD-467C-986D-F63EAE96EAC9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Player_Bubbles" ID="{CC6599EA-F234-4807-977A-9E57A5AC3709}" ShortID="54292783">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0746AA88-8728-457E-AD26-9D6183D13E62}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="player_bubbles_01" ID="{F3D6F7C7-232F-44A5-884B-50A2C088F2A0}" ShortID="624181836">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles05" ID="{6DC793EB-37C4-459F-A0B6-B890AB29EC64}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="651692968"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles05" ID="{6DC793EB-37C4-459F-A0B6-B890AB29EC64}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_bubbles_02" ID="{9B680069-9150-4596-B028-4FF77AB30571}" ShortID="295081703">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles06" ID="{9B59FBD3-ACB4-4F67-B761-FD1EE08E2E6A}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="688931879"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles06" ID="{9B59FBD3-ACB4-4F67-B761-FD1EE08E2E6A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_bubbles_03" ID="{8A525D2E-3013-433D-9EA5-F0BBF5FE7B28}" ShortID="138669021">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles07" ID="{E99495EB-E7DA-4024-927B-A6B900A97DA5}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="96866420"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles07" ID="{E99495EB-E7DA-4024-927B-A6B900A97DA5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_bubbles_04" ID="{F69DCF1E-EF33-4DAD-A5CC-248E18C68ADA}" ShortID="577139316">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles09" ID="{EBF31A1A-1AAD-4E7E-8B28-C9D13691B741}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="583328492"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles09" ID="{EBF31A1A-1AAD-4E7E-8B28-C9D13691B741}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="player_bubbles_05" ID="{CA85A6EA-9D6A-49EF-A1ED-8A925A8356EA}" ShortID="109852013">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bubbles10" ID="{E3BB07C1-8DDE-43E3-80B3-3F3450F43445}">
+									<Language>SFX</Language>
+									<AudioFile>bubbles10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="207209370"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="bubbles10" ID="{E3BB07C1-8DDE-43E3-80B3-3F3450F43445}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

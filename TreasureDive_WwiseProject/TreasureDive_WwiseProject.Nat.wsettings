@@ -3,6 +3,9 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{CAFD939D-084A-4F6E-BB6B-8EA90DDDC9C5}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="A:\Library\Games\Dungeon Crawler Jam\"/>
+				<Property Name="Event Action List\{8E7F1208-72B7-443D-BF4E-D257267A6E8E}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{D4D697DF-7615-4821-8AE8-9CE0ABCD5368}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
 						<Value Platform="Mac"></Value>
@@ -15,6 +18,9 @@
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
 					</ValueList>
 				</Property>
+				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="asz7Mqyu0U6GDlhT6L+ZyA=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="/YfoCAxTzUCYj15piYtIfez/7d1Unc5CtepuWZL790E="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>

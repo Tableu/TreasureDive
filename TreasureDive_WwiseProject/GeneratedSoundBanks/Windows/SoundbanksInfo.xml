@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>A:\Games\TreasureDive\TreasureDive_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>A:\Games\TreasureDive\TreasureDive_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>A:\Games\TreasureDive\TreasureDive_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="430783581" Language="SFX" Hash="401459103">
+			<ObjectPath>\SoundBanks\Default Work Unit\Environment_Bank</ObjectPath>
+			<ShortName>Environment_Bank</ShortName>
+			<Path>Environment_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4010408255" Name="env_bubbles_event" ObjectPath="\Events\Default Work Unit\env_bubbles_event" DurationType="OneShot" DurationMin="0.369099" DurationMax="0.840434">
+					<IncludedMemoryFiles>
+						<File Id="676645170" Language="SFX">
+							<ShortName>bubbles02.wav</ShortName>
+							<Path>SFX\bubbles02_10C4C929.wem</Path>
+						</File>
+						<File Id="800572091" Language="SFX">
+							<ShortName>bubbles01.wav</ShortName>
+							<Path>SFX\bubbles01_10C4C929.wem</Path>
+						</File>
+						<File Id="868123595" Language="SFX">
+							<ShortName>bubbles04.wav</ShortName>
+							<Path>SFX\bubbles04_10C4C929.wem</Path>
+						</File>
+						<File Id="869581343" Language="SFX">
+							<ShortName>bubbles03.wav</ShortName>
+							<Path>SFX\bubbles03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3820128371" Language="SFX" Hash="2979540190">
+			<ObjectPath>\SoundBanks\Default Work Unit\Player_Bank</ObjectPath>
+			<ShortName>Player_Bank</ShortName>
+			<Path>Player_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2414643299" Name="player_bubbles_event" ObjectPath="\Events\Default Work Unit\player_bubbles_event" DurationType="OneShot" DurationMin="0.822354" DurationMax="2.086937">
+					<IncludedMemoryFiles>
+						<File Id="96866420" Language="SFX">
+							<ShortName>bubbles07.wav</ShortName>
+							<Path>SFX\bubbles07_10C4C929.wem</Path>
+						</File>
+						<File Id="207209370" Language="SFX">
+							<ShortName>bubbles10.wav</ShortName>
+							<Path>SFX\bubbles10_10C4C929.wem</Path>
+						</File>
+						<File Id="583328492" Language="SFX">
+							<ShortName>bubbles09.wav</ShortName>
+							<Path>SFX\bubbles09_10C4C929.wem</Path>
+						</File>
+						<File Id="651692968" Language="SFX">
+							<ShortName>bubbles05.wav</ShortName>
+							<Path>SFX\bubbles05_10C4C929.wem</Path>
+						</File>
+						<File Id="688931879" Language="SFX">
+							<ShortName>bubbles06.wav</ShortName>
+							<Path>SFX\bubbles06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

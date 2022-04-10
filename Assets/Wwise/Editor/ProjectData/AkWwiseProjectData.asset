@@ -66,8 +66,36 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: da540589d8f83b42beb033c8b1c23497
     GuidInternal: 
-    m_lastTime: -8585519942607585065
-    List: []
+    m_lastTime: -8585519928315288639
+    List:
+    - name: Environment_Bank
+      guid: fd87e8080c53cd40988f5e69898b487d
+      id: 430783581
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da540589d8f83b42beb033c8b1c23497
+      - ElementName: Environment_Bank
+        ObjectType: 7
+        guid: fd87e8080c53cd40988f5e69898b487d
+      Path: SoundBanks\Default Work Unit\Environment_Bank
+    - name: Player_Bank
+      guid: ecffeddd549dce42b5ea6e5992fbf741
+      id: 3820128371
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da540589d8f83b42beb033c8b1c23497
+      - ElementName: Player_Bank
+        ObjectType: 7
+        guid: ecffeddd549dce42b5ea6e5992fbf741
+      Path: SoundBanks\Default Work Unit\Player_Bank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +108,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c777963f68f1224e8080f64a5270e741
     GuidInternal: 
-    m_lastTime: -8585519942608265219
-    List: []
+    m_lastTime: -8585519929478813338
+    List:
+    - name: env_bubbles_event
+      guid: 08127f8eb7723d44bf4ed257267a6e8e
+      id: 4010408255
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: env_bubbles_event
+        ObjectType: 3
+        guid: 08127f8eb7723d44bf4ed257267a6e8e
+      Path: Events\Default Work Unit\env_bubbles_event
+      maxAttenuation: 0
+      maxDuration: 0.840434
+      minDuration: 0.369099
+    - name: player_bubbles_event
+      guid: df97d6d4157621488ae89ce0abcd5368
+      id: 2414643299
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player_bubbles_event
+        ObjectType: 3
+        guid: df97d6d4157621488ae89ce0abcd5368
+      Path: Events\Default Work Unit\player_bubbles_event
+      maxAttenuation: 0
+      maxDuration: 2.086937
+      minDuration: 0.822354
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +201,7 @@ MonoBehaviour:
     m_lastTime: -8585519942608195201
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 090000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
