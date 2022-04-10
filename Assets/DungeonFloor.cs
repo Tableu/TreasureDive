@@ -47,7 +47,7 @@ public class DungeonFloor
         {
             PlayerManager.Instance.Position = ladder.Entrance;
             DungeonManager.Instance.MoveUpFloor();
-            AkSoundEngine.PostEvent("env_bubbles_event", gameObject);
+            //AkSoundEngine.PostEvent("env_bubbles_event", gameObject);
             return true;
         }
 
