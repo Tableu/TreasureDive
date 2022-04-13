@@ -34,8 +34,9 @@ public class PlayerManager
     public int Oxygen;
     public int MaxOxygen;
 
-    public Vector2Int Position = new Vector2Int(1,1);
+    public Vector2Int Position = new Vector2Int(2,2);
     public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
+    public int ViewDirectionOffset => _viewDirection;
 
     public bool Move(int direction)
     {
