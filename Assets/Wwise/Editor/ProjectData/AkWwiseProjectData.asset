@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: da540589d8f83b42beb033c8b1c23497
     GuidInternal: 
-    m_lastTime: -8585519928315288639
+    m_lastTime: -8585518213986343998
     List:
     - name: Environment_Bank
       guid: fd87e8080c53cd40988f5e69898b487d
@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c777963f68f1224e8080f64a5270e741
     GuidInternal: 
-    m_lastTime: -8585519929478813338
+    m_lastTime: -8585518213986554050
     List:
     - name: env_bubbles_event
       guid: 08127f8eb7723d44bf4ed257267a6e8e
@@ -144,6 +144,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.086937
       minDuration: 0.822354
+    - name: player_fire_event
+      guid: 2e27eb8086879c4ca56caa986267c267
+      id: 3138598136
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player_fire_event
+        ObjectType: 3
+        guid: 2e27eb8086879c4ca56caa986267c267
+      Path: Events\Default Work Unit\player_fire_event
+      maxAttenuation: 0
+      maxDuration: 1.16325
+      minDuration: 1.16325
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="player_fire_event" ID="{80EB272E-8786-4C9C-A56C-AA986267C267}">
+					<ChildrenList>
+						<Action Name="" ID="{50759166-F4BA-4636-A10D-708A8EF9FF3A}" ShortID="864574283">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_fire_wep" ID="{F6CFC869-AA05-4791-9A81-2286962E46F8}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

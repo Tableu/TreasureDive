@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID ENV_BUBBLES_EVENT = 4010408255U;
         static const AkUniqueID PLAYER_BUBBLES_EVENT = 2414643299U;
+        static const AkUniqueID PLAYER_FIRE_EVENT = 3138598136U;
     } // namespace EVENTS
 
     namespace BANKS

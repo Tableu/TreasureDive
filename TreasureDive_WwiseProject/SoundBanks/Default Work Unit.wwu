@@ -13,6 +13,7 @@
 				<SoundBank Name="Player_Bank" ID="{DDEDFFEC-9D54-42CE-B5EA-6E5992FBF741}">
 					<ObjectInclusionList>
 						<ObjectRef Name="player_bubbles_event" ID="{D4D697DF-7615-4821-8AE8-9CE0ABCD5368}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_fire_event" ID="{80EB272E-8786-4C9C-A56C-AA986267C267}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
