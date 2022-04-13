@@ -38,12 +38,12 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3738617009">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3820128371" Language="SFX" Hash="1306562598">
+		<SoundBank Id="3820128371" Language="SFX" Hash="2488847105">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player_Bank</ObjectPath>
 			<ShortName>Player_Bank</ShortName>
 			<Path>Player_Bank.bnk</Path>
@@ -72,11 +72,75 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3138598136" Name="player_fire_event" ObjectPath="\Events\Default Work Unit\player_fire_event" DurationType="OneShot" DurationMin="1.16325" DurationMax="1.16325">
+				<Event Id="3723058631" Name="player_damage_event" ObjectPath="\Events\Default Work Unit\player_damage_event" DurationType="OneShot" DurationMin="0.825729" DurationMax="2.086937">
 					<IncludedMemoryFiles>
-						<File Id="34155997" Language="SFX">
-							<ShortName>harpoon04_bubbles.wav</ShortName>
-							<Path>SFX\harpoon04_bubbles_10C4C929.wem</Path>
+						<File Id="96866420" Language="SFX">
+							<ShortName>bubbles07.wav</ShortName>
+							<Path>SFX\bubbles07_10C4C929.wem</Path>
+						</File>
+						<File Id="207209370" Language="SFX">
+							<ShortName>bubbles10.wav</ShortName>
+							<Path>SFX\bubbles10_10C4C929.wem</Path>
+						</File>
+						<File Id="583328492" Language="SFX">
+							<ShortName>bubbles09.wav</ShortName>
+							<Path>SFX\bubbles09_10C4C929.wem</Path>
+						</File>
+						<File Id="651692968" Language="SFX">
+							<ShortName>bubbles05.wav</ShortName>
+							<Path>SFX\bubbles05_10C4C929.wem</Path>
+						</File>
+						<File Id="687214110" Language="SFX">
+							<ShortName>playerDamage01.wav</ShortName>
+							<Path>SFX\playerDamage01_10C4C929.wem</Path>
+						</File>
+						<File Id="688931879" Language="SFX">
+							<ShortName>bubbles06.wav</ShortName>
+							<Path>SFX\bubbles06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3138598136" Name="player_fire_event" ObjectPath="\Events\Default Work Unit\player_fire_event" DurationType="OneShot" DurationMin="1.16325" DurationMax="2.086937">
+					<IncludedMemoryFiles>
+						<File Id="96866420" Language="SFX">
+							<ShortName>bubbles07.wav</ShortName>
+							<Path>SFX\bubbles07_10C4C929.wem</Path>
+						</File>
+						<File Id="207209370" Language="SFX">
+							<ShortName>bubbles10.wav</ShortName>
+							<Path>SFX\bubbles10_10C4C929.wem</Path>
+						</File>
+						<File Id="583328492" Language="SFX">
+							<ShortName>bubbles09.wav</ShortName>
+							<Path>SFX\bubbles09_10C4C929.wem</Path>
+						</File>
+						<File Id="592969275" Language="SFX">
+							<ShortName>harpoon04.wav</ShortName>
+							<Path>SFX\harpoon04_10C4C929.wem</Path>
+						</File>
+						<File Id="651692968" Language="SFX">
+							<ShortName>bubbles05.wav</ShortName>
+							<Path>SFX\bubbles05_10C4C929.wem</Path>
+						</File>
+						<File Id="688931879" Language="SFX">
+							<ShortName>bubbles06.wav</ShortName>
+							<Path>SFX\bubbles06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4109590416" Name="player_o2_low_event" ObjectPath="\Events\Default Work Unit\player_o2_low_event" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="199123367" Language="SFX">
+							<ShortName>o2_low.wav</ShortName>
+							<Path>SFX\o2_low_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="532912144" Name="player_o2_pickup_event" ObjectPath="\Events\Default Work Unit\player_o2_pickup_event" DurationType="OneShot" DurationMin="1.797625" DurationMax="1.797625">
+					<IncludedMemoryFiles>
+						<File Id="974046477" Language="SFX">
+							<ShortName>o2Pickup.wav</ShortName>
+							<Path>SFX\o2Pickup_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -35,6 +35,7 @@ public class PlayerInput : MonoBehaviour
         {
             PlayerManager.Instance.Move(DungeonData.NORTH);
         }
+        AkSoundEngine.PostEvent("player_bubbles_event", gameObject);
     }
 
     private void OnRotate(InputAction.CallbackContext callbackContext)

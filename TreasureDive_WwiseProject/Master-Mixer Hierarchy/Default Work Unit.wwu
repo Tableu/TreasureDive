@@ -11,6 +11,46 @@
 					</ReferenceList>
 					<ObjectLists/>
 				</Bus>
+				<Bus Name="Player_Bus" ID="{FA7EE927-53A2-4514-A79B-97F31721DCCF}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{94EAE248-DEBA-40AE-AD61-447A5B29B61C}" WorkUnitID="{34A342DC-7A5A-47DC-9F9E-64DE3261C038}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="Item_Bus" ID="{47840112-AC3C-4F53-B313-31C7B17CF872}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{94EAE248-DEBA-40AE-AD61-447A5B29B61C}" WorkUnitID="{34A342DC-7A5A-47DC-9F9E-64DE3261C038}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="Environment_Bus" ID="{5762DB5A-D6BE-47D0-9524-B78EAE5C114E}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{94EAE248-DEBA-40AE-AD61-447A5B29B61C}" WorkUnitID="{34A342DC-7A5A-47DC-9F9E-64DE3261C038}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="UI_Bus" ID="{6B15C80B-8F69-4D04-AA57-9192350DBB72}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{94EAE248-DEBA-40AE-AD61-447A5B29B61C}" WorkUnitID="{34A342DC-7A5A-47DC-9F9E-64DE3261C038}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="Enemy_Bus" ID="{DC477181-09FD-4038-B35A-DEE22A6876B2}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{94EAE248-DEBA-40AE-AD61-447A5B29B61C}" WorkUnitID="{34A342DC-7A5A-47DC-9F9E-64DE3261C038}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>
