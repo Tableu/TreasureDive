@@ -38,8 +38,50 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 7b5b17748a05034894b54c1c8d5da9fc
     GuidInternal: 
-    m_lastTime: -8585519942608655299
+    m_lastTime: -8585517717518926009
     List:
+    - name: Enemy_Bus
+      guid: 817147dcfd093840b35adee22a6876b2
+      id: 1411040840
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b5b17748a05034894b54c1c8d5da9fc
+      - ElementName: Enemy_Bus
+        ObjectType: 2
+        guid: 817147dcfd093840b35adee22a6876b2
+      Path: Master-Mixer Hierarchy\Default Work Unit\Enemy_Bus
+    - name: Environment_Bus
+      guid: 5adb6257bed6d0479524b78eae5c114e
+      id: 1523166483
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b5b17748a05034894b54c1c8d5da9fc
+      - ElementName: Environment_Bus
+        ObjectType: 2
+        guid: 5adb6257bed6d0479524b78eae5c114e
+      Path: Master-Mixer Hierarchy\Default Work Unit\Environment_Bus
+    - name: Item_Bus
+      guid: 120184473cac534fb31331c7b17cf872
+      id: 937213699
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b5b17748a05034894b54c1c8d5da9fc
+      - ElementName: Item_Bus
+        ObjectType: 2
+        guid: 120184473cac534fb31331c7b17cf872
+      Path: Master-Mixer Hierarchy\Default Work Unit\Item_Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +96,34 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Player_Bus
+      guid: 27e97efaa2531445a79b97f31721dccf
+      id: 1138681361
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b5b17748a05034894b54c1c8d5da9fc
+      - ElementName: Player_Bus
+        ObjectType: 2
+        guid: 27e97efaa2531445a79b97f31721dccf
+      Path: Master-Mixer Hierarchy\Default Work Unit\Player_Bus
+    - name: UI_Bus
+      guid: 0bc8156b698f044daa579192350dbb72
+      id: 3247222208
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7b5b17748a05034894b54c1c8d5da9fc
+      - ElementName: UI_Bus
+        ObjectType: 2
+        guid: 0bc8156b698f044daa579192350dbb72
+      Path: Master-Mixer Hierarchy\Default Work Unit\UI_Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,8 +136,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: da540589d8f83b42beb033c8b1c23497
     GuidInternal: 
-    m_lastTime: -8585518213986343998
+    m_lastTime: -8585517714971309721
     List:
+    - name: Enemy_Bank
+      guid: 50d46a3794ca9e488c83f91e0940bb61
+      id: 3137872592
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da540589d8f83b42beb033c8b1c23497
+      - ElementName: Enemy_Bank
+        ObjectType: 7
+        guid: 50d46a3794ca9e488c83f91e0940bb61
+      Path: SoundBanks\Default Work Unit\Enemy_Bank
     - name: Environment_Bank
       guid: fd87e8080c53cd40988f5e69898b487d
       id: 430783581
@@ -82,6 +166,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: fd87e8080c53cd40988f5e69898b487d
       Path: SoundBanks\Default Work Unit\Environment_Bank
+    - name: Item_Bank
+      guid: 71b2b212a21000458ee1ff636b9274ea
+      id: 3999541165
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da540589d8f83b42beb033c8b1c23497
+      - ElementName: Item_Bank
+        ObjectType: 7
+        guid: 71b2b212a21000458ee1ff636b9274ea
+      Path: SoundBanks\Default Work Unit\Item_Bank
     - name: Player_Bank
       guid: ecffeddd549dce42b5ea6e5992fbf741
       id: 3820128371
@@ -96,6 +194,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: ecffeddd549dce42b5ea6e5992fbf741
       Path: SoundBanks\Default Work Unit\Player_Bank
+    - name: UI_Bank
+      guid: 14500d4edf680a459f6afbb6b25b5253
+      id: 1839668536
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da540589d8f83b42beb033c8b1c23497
+      - ElementName: UI_Bank
+        ObjectType: 7
+        guid: 14500d4edf680a459f6afbb6b25b5253
+      Path: SoundBanks\Default Work Unit\UI_Bank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -108,8 +220,45 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c777963f68f1224e8080f64a5270e741
     GuidInternal: 
-    m_lastTime: -8585518213986554050
+    m_lastTime: -8585517708952606393
     List:
+    - name: enemy
+      guid: 46d71321e7c5b2409ee30721c35684d4
+      id: 2299321487
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: enemy
+        ObjectType: 4
+        guid: 46d71321e7c5b2409ee30721c35684d4
+      Path: Events\Default Work Unit\enemy
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_damage_event
+      guid: 760323922fc9874d8234f68ef6f24c8b
+      id: 2736226020
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: enemy
+        ObjectType: 4
+        guid: 46d71321e7c5b2409ee30721c35684d4
+      - ElementName: enemy_damage_event
+        ObjectType: 3
+        guid: 760323922fc9874d8234f68ef6f24c8b
+      Path: Events\Default Work Unit\enemy\enemy_damage_event
+      maxAttenuation: 10
+      maxDuration: 0.850042
+      minDuration: 0.850042
     - name: env_bubbles_event
       guid: 08127f8eb7723d44bf4ed257267a6e8e
       id: 4010408255
@@ -120,13 +269,127 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: environment
+        ObjectType: 4
+        guid: 8454ea2cc630fc4aa54eb629e9deded2
       - ElementName: env_bubbles_event
         ObjectType: 3
         guid: 08127f8eb7723d44bf4ed257267a6e8e
-      Path: Events\Default Work Unit\env_bubbles_event
+      Path: Events\Default Work Unit\environment\env_bubbles_event
       maxAttenuation: 0
       maxDuration: 0.840434
       minDuration: 0.369099
+    - name: environment
+      guid: 8454ea2cc630fc4aa54eb629e9deded2
+      id: 1229948536
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: environment
+        ObjectType: 4
+        guid: 8454ea2cc630fc4aa54eb629e9deded2
+      Path: Events\Default Work Unit\environment
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: item_pickup_event
+      guid: 6f7ca0298984134aa36b8096036e4bca
+      id: 3191969758
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: items
+        ObjectType: 4
+        guid: 810de64c2e75db4eb5ade78f0c51a02c
+      - ElementName: item_pickup_event
+        ObjectType: 3
+        guid: 6f7ca0298984134aa36b8096036e4bca
+      Path: Events\Default Work Unit\items\item_pickup_event
+      maxAttenuation: 0
+      maxDuration: 0.751146
+      minDuration: 0.751146
+    - name: item_pickup_o2_event
+      guid: 472c9cabafd5694da13aba85c992c88d
+      id: 1535481236
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: items
+        ObjectType: 4
+        guid: 810de64c2e75db4eb5ade78f0c51a02c
+      - ElementName: item_pickup_o2_event
+        ObjectType: 3
+        guid: 472c9cabafd5694da13aba85c992c88d
+      Path: Events\Default Work Unit\items\item_pickup_o2_event
+      maxAttenuation: 0
+      maxDuration: 1.797625
+      minDuration: 1.797625
+    - name: item_pickup_special_event
+      guid: 3c5b55b14ab8ce4680a32eda0ae11d6a
+      id: 3200543478
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: items
+        ObjectType: 4
+        guid: 810de64c2e75db4eb5ade78f0c51a02c
+      - ElementName: item_pickup_special_event
+        ObjectType: 3
+        guid: 3c5b55b14ab8ce4680a32eda0ae11d6a
+      Path: Events\Default Work Unit\items\item_pickup_special_event
+      maxAttenuation: 0
+      maxDuration: 1.323229
+      minDuration: 1.323229
+    - name: items
+      guid: 810de64c2e75db4eb5ade78f0c51a02c
+      id: 2151963051
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: items
+        ObjectType: 4
+        guid: 810de64c2e75db4eb5ade78f0c51a02c
+      Path: Events\Default Work Unit\items
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: player
+      guid: 860c8d823a669c4e9a921921bb686741
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player
+        ObjectType: 4
+        guid: 860c8d823a669c4e9a921921bb686741
+      Path: Events\Default Work Unit\player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: player_bubbles_event
       guid: df97d6d4157621488ae89ce0abcd5368
       id: 2414643299
@@ -137,13 +400,36 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player
+        ObjectType: 4
+        guid: 860c8d823a669c4e9a921921bb686741
       - ElementName: player_bubbles_event
         ObjectType: 3
         guid: df97d6d4157621488ae89ce0abcd5368
-      Path: Events\Default Work Unit\player_bubbles_event
+      Path: Events\Default Work Unit\player\player_bubbles_event
       maxAttenuation: 0
       maxDuration: 2.086937
       minDuration: 0.822354
+    - name: player_damage_event
+      guid: b7b91b6e7510584abd512f63f00d39c2
+      id: 3723058631
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player
+        ObjectType: 4
+        guid: 860c8d823a669c4e9a921921bb686741
+      - ElementName: player_damage_event
+        ObjectType: 3
+        guid: b7b91b6e7510584abd512f63f00d39c2
+      Path: Events\Default Work Unit\player\player_damage_event
+      maxAttenuation: 0
+      maxDuration: 0.825729
+      minDuration: 0.825729
     - name: player_fire_event
       guid: 2e27eb8086879c4ca56caa986267c267
       id: 3138598136
@@ -154,13 +440,113 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player
+        ObjectType: 4
+        guid: 860c8d823a669c4e9a921921bb686741
       - ElementName: player_fire_event
         ObjectType: 3
         guid: 2e27eb8086879c4ca56caa986267c267
-      Path: Events\Default Work Unit\player_fire_event
+      Path: Events\Default Work Unit\player\player_fire_event
       maxAttenuation: 0
-      maxDuration: 1.16325
+      maxDuration: 2.086937
       minDuration: 1.16325
+    - name: player_o2_low_event
+      guid: 9bd33ab237252240bc62394315398bd2
+      id: 4109590416
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: player
+        ObjectType: 4
+        guid: 860c8d823a669c4e9a921921bb686741
+      - ElementName: player_o2_low_event
+        ObjectType: 3
+        guid: 9bd33ab237252240bc62394315398bd2
+      Path: Events\Default Work Unit\player\player_o2_low_event
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: ui
+      guid: e5f7815ddd5c9349bd3ac74d75436eef
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: ui
+        ObjectType: 4
+        guid: e5f7815ddd5c9349bd3ac74d75436eef
+      Path: Events\Default Work Unit\ui
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_back_event
+      guid: b10d281afdcd1a49b3737e15488be2b5
+      id: 73961094
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: ui
+        ObjectType: 4
+        guid: e5f7815ddd5c9349bd3ac74d75436eef
+      - ElementName: ui_back_event
+        ObjectType: 3
+        guid: b10d281afdcd1a49b3737e15488be2b5
+      Path: Events\Default Work Unit\ui\ui_back_event
+      maxAttenuation: 0
+      maxDuration: 0.822896
+      minDuration: 0.822896
+    - name: ui_click_event
+      guid: 34c6380ca3845f44a49762969bc867ea
+      id: 2528159659
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: ui
+        ObjectType: 4
+        guid: e5f7815ddd5c9349bd3ac74d75436eef
+      - ElementName: ui_click_event
+        ObjectType: 3
+        guid: 34c6380ca3845f44a49762969bc867ea
+      Path: Events\Default Work Unit\ui\ui_click_event
+      maxAttenuation: 0
+      maxDuration: 0.310813
+      minDuration: 0.310813
+    - name: ui_hover_event
+      guid: 8fd7f5bf526381449cf62d5464d9cdd9
+      id: 3667070125
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: ui
+        ObjectType: 4
+        guid: e5f7815ddd5c9349bd3ac74d75436eef
+      - ElementName: ui_hover_event
+        ObjectType: 3
+        guid: 8fd7f5bf526381449cf62d5464d9cdd9
+      Path: Events\Default Work Unit\ui\ui_hover_event
+      maxAttenuation: 0
+      maxDuration: 0.087438
+      minDuration: 0.087438
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
