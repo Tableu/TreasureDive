@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using System.IO;
 
+#if UNITY_EDITOR
 public class AtlasImporter : AssetPostprocessor
 {
     private void OnPostprocessTexture(Texture2D import)
@@ -17,3 +18,4 @@ public class AtlasImporter : AssetPostprocessor
         //import.filterMode = FilterMode.Point;
     }
 }
+#endif

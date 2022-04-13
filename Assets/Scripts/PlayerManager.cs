@@ -47,6 +47,7 @@ public class PlayerManager
             Position += viewDirections[direction];
             Debug.Log("Moving " + viewDirections[direction]);
             DungeonManager.Instance.CurrentFloor.Interact(Position);
+            DungeonRenderer.Instance.RenderDungeon();
             return true;
         }
         return false;
@@ -70,6 +71,7 @@ public class PlayerManager
             }
         }
         Debug.Log("Rotating " + _viewDirection);
+        DungeonRenderer.Instance.RenderDungeon();
     }
 
     public IEnumerator OxygenTimer()

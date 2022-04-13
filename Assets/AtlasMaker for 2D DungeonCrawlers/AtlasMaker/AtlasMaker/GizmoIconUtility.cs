@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor.Callbacks;
+#endif
 
 namespace zooperdan.AtlasMaker
 {
-
+    #if UNITY_EDITOR
     public class GizmoIconUtility
     {
         [DidReloadScripts]
@@ -40,4 +42,5 @@ namespace zooperdan.AtlasMaker
 
         }
     }
+    #endif
 }

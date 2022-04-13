@@ -38,6 +38,7 @@ public class DungeonManager
             }
         }
         _currentFloor = _dungeonFloors[0];
+        DungeonRenderer.Instance.RenderDungeon();
     }
 
     public void MoveUpFloor()
@@ -52,6 +53,7 @@ public class DungeonManager
         {
             _currentFloorIndex++;
         }
+        DungeonRenderer.Instance.RenderDungeon();
     }
 
     public void MoveDownFloor()
@@ -66,5 +68,6 @@ public class DungeonManager
         {
             _currentFloorIndex--;
         }
+        DungeonRenderer.Instance.RenderDungeon();
     }
 }
