@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+#if UNITY_EDITOR
 using Unity.EditorCoroutines.Editor;
 using UnityEditor;
+#endif
 using UnityEngine;
 using Newtonsoft.Json;
 
@@ -207,7 +209,7 @@ namespace zooperdan.AtlasMaker
     {
 
     }
-
+    #if UNITY_EDITOR
     public class AtlasMaker : EditorWindow
     {
         public static AtlasMaker Instance { get; private set; }
@@ -1600,5 +1602,5 @@ namespace zooperdan.AtlasMaker
 
 
     }
-
+    #endif
 }

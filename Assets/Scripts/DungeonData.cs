@@ -22,10 +22,10 @@ public static class DungeonData
     {
         new[]
         {
-            new []{"wll", "wll", "wll", "wll"},
-            new []{"wll", "empty", "entrance", "wll"},
+            new []{"empty", "wll", "wll", "empty"},
+            new []{"wll", "empty", "empty", "wll"},
             new []{"wll", "empty", "spawn", "wll"},
-            new []{"wll", "wll", "wll", "wll"}
+            new []{"empty", "wll", "wll", "empty"}
         },
         new[]
         {

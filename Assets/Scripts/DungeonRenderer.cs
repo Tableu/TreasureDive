@@ -1,27 +1,50 @@
 using System;
 using UnityEngine;
-using UnityEngine.U2D;
 using zooperdan.AtlasMaker;
 using Vector2Int = UnityEngine.Vector2Int;
 
 public class DungeonRenderer : MonoBehaviour
 {
-    public TextAsset jsonFile;
-    public Sprite atlasImage;
-    public Camera camera;
-    public Vector2Int screenDimensions;
-    public Vector3 screenOffset;
+    [SerializeField] public TextAsset jsonFile;
+    [SerializeField]public Sprite atlasImage;
+    [SerializeField]public Camera camera;
+    [SerializeField]public Vector2Int screenDimensions;
+    [SerializeField]public Vector3 screenOffset;
 
     private JSONResult _atlasData;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
         _atlasData = JsonUtility.FromJson<JSONResult>(jsonFile.text);
-        RenderDungeon();
+    }
+    
+    private static DungeonRenderer instance = null;
+
+    public static DungeonRenderer Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                GameObject go = new GameObject();
+                instance = go.AddComponent<DungeonRenderer>();
+                Instantiate(go);
+            }
+            return instance;
+        }
     }
 
-    private void RenderDungeon()
+    public void RenderDungeon()
     {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
         DrawBackground(_atlasData.layers.Find(layer => layer.name == "ground").id - 1, "ground");
         DrawBackground(_atlasData.layers.Find(layer => layer.name == "ceiling").id - 1, "ceiling");
         for (int z = -_atlasData.depth; z <= 0; z++)
@@ -38,47 +61,47 @@ public class DungeonRenderer : MonoBehaviour
         Vector2Int position = PlayerManager.Instance.Position;
         switch (PlayerManager.Instance.ViewDirectionOffset)
         {
-            case DungeonData.NORTH:
-                return new Vector2Int(position.x + x, position.y + z);
-            case DungeonData.EAST:
-                return new Vector2Int(position.x - z, position.y + x);
             case DungeonData.SOUTH:
-                return new Vector2Int(position.x - x, position.y - z);
+                return new Vector2Int(position.x - x, position.y + z);
+            case DungeonData.EAST:
+                return new Vector2Int(position.x + z, position.y + x);
+            case DungeonData.NORTH:
+                return new Vector2Int(position.x + x, position.y - z);
             case DungeonData.WEST:
-                return new Vector2Int(position.x + z, position.y - x);
+                return new Vector2Int(position.x - z, position.y - x);
         }
 
         return new Vector2Int(0, 0);
     }
 
-    private void DrawSquare(int x, int z)
+    private void DrawSquare(int x, int y)
     {
-        Vector2Int directionOffset = GetPlayerDirectionVectorOffsets(x, z);
+        Vector2Int directionOffset = GetPlayerDirectionVectorOffsets(x, y);
 
-        if (directionOffset.x > 0 && directionOffset.y > 0
+        if (directionOffset.x >= 0 && directionOffset.y >= 0
                                   && directionOffset.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
                                   && directionOffset.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0))
         {
             if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData.WALL)
             {
                 int layerId = _atlasData.layers.Find(layer => layer.name == "wall").id;
-                DrawSideWalls(layerId - 1, x, z);
-                DrawFrontWalls(layerId - 1, x, z);
+                DrawSideWalls(layerId - 1, x, y);
+                DrawFrontWalls(layerId - 1, x, y);
             }
             else if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData
                 .HEALTH_REFILL)
             {
                 int layerId = _atlasData.layers.Find(layer => layer.name == "object").id;
-                DrawObject(layerId - 1, x, z);
+                DrawObject(layerId - 1, x, y);
             }
         }
     }
 
-    private void DrawObject(int layerId, int x, int z)
+    private void DrawObject(int layerId, int x, int y)
     {
         bool bothSides = _atlasData.layers[layerId] != null && _atlasData.layers[layerId].mode == 2;
         int xx = bothSides ? x - (x * 2) : 0;
-        JSONTile tile = GetTile(layerId, "object", xx, z);
+        JSONTile tile = GetTile(layerId, "object", xx, y);
 
         if (tile != null)
         {
@@ -86,56 +109,56 @@ public class DungeonRenderer : MonoBehaviour
 
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y)) + screenOffset;
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y)) + screenOffset;
             }
         }
     }
 
-    private void DrawFrontWalls(int layerId, int x, int z)
+    private void DrawFrontWalls(int layerId, int x, int y)
     {
         bool bothSides = _atlasData.layers[layerId] != null && _atlasData.layers[layerId].mode == 2;
         int xx = bothSides ? x - (x * 2) : 0;
-        JSONTile tile = GetTile(layerId, "front", xx, z);
+        JSONTile tile = GetTile(layerId, "front", xx, y);
         if (tile != null)
         {
             GameObject go = MakeQuad(tile);
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.01f)) + screenOffset;
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.01f)) + screenOffset;
             }
         }
     }
 
-    private void DrawSideWalls(int layerId, int x, int z)
+    private void DrawSideWalls(int layerId, int x, int y)
     {
         if (x <= 0)
         {
-            JSONTile tile = GetTile(layerId, "side", x - (x * 2), z);
+            JSONTile tile = GetTile(layerId, "side", x - (x * 2), y);
             if (tile != null)
             {
                 GameObject go = MakeQuad(tile);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.02f)) + screenOffset;
             }
         }
 
         if (x >= 0)
         {
-            JSONTile tile = GetTile(layerId, "side", x, z);
+            JSONTile tile = GetTile(layerId, "side", x, y);
             if (tile != null)
             {
                 GameObject go = MakeQuad(tile);
                 int tx = screenDimensions.x - tile.screen.x;
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.02f)) + screenOffset;
                 go.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
@@ -155,12 +178,12 @@ public class DungeonRenderer : MonoBehaviour
                     GameObject go = MakeQuad(tile);
                     if (bothSides)
                     {
-                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -z)) + screenOffset;
                     }
                     else
                     {
                         int tx = tile.screen.x + (x * tile.coords.w);
-                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset;
+                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h,-z)) + screenOffset;
                     }
                 }
             }
@@ -172,6 +195,7 @@ public class DungeonRenderer : MonoBehaviour
         GameObject go = new GameObject();
         SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
         sr.sprite = Sprite.Create(atlasImage.texture, new Rect(tile.coords.x, atlasImage.texture.height-tile.coords.y-tile.coords.h, tile.coords.w, tile.coords.h), Vector2.zero, 100);
+        go.transform.parent = transform;
         return go;
     }
 

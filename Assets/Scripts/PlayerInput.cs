@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
     {
         _playerInputActions.Player.Move.started += OnMove;
         _playerInputActions.Player.Rotate.started += OnRotate;
+        DungeonManager dungeonManager = DungeonManager.Instance;
     }
 
     private void OnMove(InputAction.CallbackContext callbackContext)
