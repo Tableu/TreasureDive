@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{890554DA-F8D8-423B-BEB0-33C8B1C23497}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{890554DA-F8D8-423B-BEB0-33C8B1C23497}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Environment_Bank" ID="{08E887FD-530C-40CD-988F-5E69898B487D}">
+					<ObjectInclusionList>
+						<ObjectRef Name="env_bubbles_event" ID="{8E7F1208-72B7-443D-BF4E-D257267A6E8E}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Player_Bank" ID="{DDEDFFEC-9D54-42CE-B5EA-6E5992FBF741}">
+					<ObjectInclusionList>
+						<ObjectRef Name="player_bubbles_event" ID="{D4D697DF-7615-4821-8AE8-9CE0ABCD5368}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="player_fire_event" ID="{80EB272E-8786-4C9C-A56C-AA986267C267}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
