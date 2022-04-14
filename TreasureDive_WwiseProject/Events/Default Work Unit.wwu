@@ -28,13 +28,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{9D2E2FF4-057C-4691-848C-34FDB31A1E70}" ShortID="442980280">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Bubbles" ID="{CC6599EA-F234-4807-977A-9E57A5AC3709}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="player_fire_event" ID="{80EB272E-8786-4C9C-A56C-AA986267C267}">
@@ -97,16 +90,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{BCB2DEF3-1E02-4453-A3CD-64415D236726}" ShortID="611731347">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Bubbles" ID="{CC6599EA-F234-4807-977A-9E57A5AC3709}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="item_pickup_special_event" ID="{B1555B3C-B84A-46CE-80A3-2EDA0AE11D6A}">
@@ -118,13 +101,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{A74C88EB-0389-4CE2-9505-D8405AA1A651}" ShortID="386845340">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Bubbles" ID="{CC6599EA-F234-4807-977A-9E57A5AC3709}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="item_pickup_o2_event" ID="{AB9C2C47-D5AF-4D69-A13A-BA85C992C88D}">
@@ -133,13 +109,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="item_pickup_o2" ID="{CF4F53C1-D44C-44EF-AEC1-070D60BC3179}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{E8C88483-045F-4313-8DF5-83F3895FA710}" ShortID="137349788">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Bubbles" ID="{CC6599EA-F234-4807-977A-9E57A5AC3709}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

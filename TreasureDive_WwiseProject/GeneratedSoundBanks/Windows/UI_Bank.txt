@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	73961094	ui_back_event			\Default Work Unit\ui\ui_back_event	
+	2528159659	ui_click_event			\Default Work Unit\ui\ui_click_event	
+	3667070125	ui_hover_event			\Default Work Unit\ui\ui_hover_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	135620853	ui_back	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\uiBack03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_back		158060
+	253895743	ui_click	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\uiClick06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_click		59740
+	699328467	ui_hover	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\UI_Hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ui_hover		16852
+

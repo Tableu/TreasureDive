@@ -1,5 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
-	4010408255	env_bubbles_event			\Default Work Unit\env_bubbles_event	
+	4010408255	env_bubbles_event			\Default Work Unit\environment\env_bubbles_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	676645170	env_bubbles_02	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_02		89816
