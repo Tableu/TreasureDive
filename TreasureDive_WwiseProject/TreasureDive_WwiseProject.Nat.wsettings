@@ -37,9 +37,9 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Mac"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="asz7Mqyu0U6GDlhT6L+ZyA=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="/YfoCAxTzUCYj15piYtIfez/7d1Unc5CtepuWZL790FxsrISohAARY7h/2NrknTqUNRqN5TKnkiMg/keCUC7YRRQDU7faApFn2r7trJbUlM="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="UNRqN5TKnkiMg/keCUC7Yf2H6AgMU81AmI9eaYmLSH1xsrISohAARY7h/2NrknTq7P/t3VSdzkK16m5Zkvv3QRRQDU7faApFn2r7trJbUlM="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="ubEESPtqrUu2AiSGv7LI9gEnFRr/////oOxhMbkY406x+bdt/Tq3/wEnFRr/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="oOxhMbkY406x+bdt/Tq3/wEnmh7/////ubEESPtqrUu2AiSGv7LI9gEnmh7/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
