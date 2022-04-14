@@ -17,13 +17,14 @@ public static class DungeonData
     public const string HEALTH_UPGRADE = "health_up";
     public const string HEALTH_REFILL = "health_refill";
     public const string OXYGEN_UPGRADE = "oxy_up";
+    public const string TREASURE = "treasure";
     
     public static List<string[][]> InitialDungeonData = new List<string[][]>()
     {
         new[]
         {
             new []{"empty", "wll", "wll", "empty"},
-            new []{"wll", "empty", "empty", "wll"},
+            new []{"wll", "treasure", "empty", "wll"},
             new []{"wll", "empty", "spawn", "wll"},
             new []{"empty", "wll", "wll", "empty"}
         },

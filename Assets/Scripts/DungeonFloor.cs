@@ -102,6 +102,11 @@ public class DungeonFloor
 
                         _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                         break;
+                    case DungeonData.TREASURE:
+                        Debug.Log("Collected treasure!");
+                        PlayerManager.Instance.Treasure += 100;
+                        _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
+                        break;
                     case DungeonData.EXIT:
                         return UseExit(pos);
                     case DungeonData.ENTRANCE:

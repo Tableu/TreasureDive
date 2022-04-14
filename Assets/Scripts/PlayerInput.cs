@@ -23,6 +23,7 @@ public class PlayerInput : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         DungeonManager dungeonManager = DungeonManager.Instance;
+        StartCoroutine(PlayerManager.Instance.OxygenTimer());
     }
 
     private void OnMove(InputAction.CallbackContext callbackContext)

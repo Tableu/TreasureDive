@@ -28,15 +28,18 @@ public class PlayerManager
 
     private int _viewDirection;
 
-    public int Health;
-    public int MaxHealth;
+    public int Health = 5;
+    public int MaxHealth = 5;
 
-    public int Oxygen;
-    public int MaxOxygen;
+    public int Oxygen = 30;
+    public int MaxOxygen = 30;
+
+    public int Treasure = 0;
 
     public Vector2Int Position = new Vector2Int(2,2);
     public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
     public int ViewDirectionOffset => _viewDirection;
+    public float OxygenPercent => (float)Oxygen / (float)MaxOxygen;
 
     public bool Move(int direction)
     {

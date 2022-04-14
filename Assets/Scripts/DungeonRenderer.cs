@@ -91,10 +91,9 @@ public class DungeonRenderer : MonoBehaviour
                 DrawSideWalls(layerId - 1, x, y);
                 DrawFrontWalls(layerId - 1, x, y);
             }
-            else if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData
-                .HEALTH_REFILL)
+            else if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData.TREASURE)
             {
-                int layerId = _atlasData.layers.Find(layer => layer.name == "object").id;
+                int layerId = _atlasData.layers.Find(layer => layer.name == "chest").id;
                 DrawObject(layerId - 1, x, y);
             }
         }

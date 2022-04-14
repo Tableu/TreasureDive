@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4520887991983709505}
   - component: {fileID: 8994824792258910978}
   m_Layer: 0
-  m_Name: sign
+  m_Name: chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
