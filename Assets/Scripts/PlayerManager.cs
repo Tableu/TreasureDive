@@ -20,9 +20,9 @@ public class PlayerManager
 
     private Vector2Int[] viewDirections = new[]
     {
-        new Vector2Int(0,1),
-        new Vector2Int(1,0),
         new Vector2Int(0,-1),
+        new Vector2Int(1,0),
+        new Vector2Int(0,1),
         new Vector2Int(-1,0)
     };
 

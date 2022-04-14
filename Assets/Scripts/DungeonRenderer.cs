@@ -16,6 +16,9 @@ public class DungeonRenderer : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        #if UNITY_EDITOR
+        screenOffset = new Vector3(-0.75f, 0.56f, 0.5f);
+#endif
     }
 
     void Start()
@@ -62,13 +65,13 @@ public class DungeonRenderer : MonoBehaviour
         switch (PlayerManager.Instance.ViewDirectionOffset)
         {
             case DungeonData.SOUTH:
-                return new Vector2Int(position.x - x, position.y + z);
+                return new Vector2Int(position.x - x, position.y - z);
             case DungeonData.EAST:
-                return new Vector2Int(position.x + z, position.y + x);
+                return new Vector2Int(position.x - z, position.y + x);
             case DungeonData.NORTH:
-                return new Vector2Int(position.x + x, position.y - z);
+                return new Vector2Int(position.x + x, position.y + z);
             case DungeonData.WEST:
-                return new Vector2Int(position.x - z, position.y - x);
+                return new Vector2Int(position.x + z, position.y - x);
         }
 
         return new Vector2Int(0, 0);
@@ -109,12 +112,12 @@ public class DungeonRenderer : MonoBehaviour
 
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y);
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y);
             }
         }
     }
@@ -129,12 +132,12 @@ public class DungeonRenderer : MonoBehaviour
             GameObject go = MakeQuad(tile);
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.01f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.01f);
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.01f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.01f);
             }
         }
     }
@@ -147,7 +150,7 @@ public class DungeonRenderer : MonoBehaviour
             if (tile != null)
             {
                 GameObject go = MakeQuad(tile);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.02f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.02f);
             }
         }
 
@@ -158,7 +161,7 @@ public class DungeonRenderer : MonoBehaviour
             {
                 GameObject go = MakeQuad(tile);
                 int tx = screenDimensions.x - tile.screen.x;
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.02f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.02f);
                 go.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
@@ -178,12 +181,12 @@ public class DungeonRenderer : MonoBehaviour
                     GameObject go = MakeQuad(tile);
                     if (bothSides)
                     {
-                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -z)) + screenOffset;
+                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-z+0.03f);
                     }
                     else
                     {
                         int tx = tile.screen.x + (x * tile.coords.w);
-                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h,-z)) + screenOffset;
+                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-z+0.03f);
                     }
                 }
             }

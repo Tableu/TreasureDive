@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,12 @@ public class PlayerInput : MonoBehaviour
     {
         _playerInputActions.Player.Move.started += OnMove;
         _playerInputActions.Player.Rotate.started += OnRotate;
+        StartCoroutine(LateStart());
+    }
+
+    private IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(1);
         DungeonManager dungeonManager = DungeonManager.Instance;
     }
 
