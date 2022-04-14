@@ -80,21 +80,27 @@ public class DungeonRenderer : MonoBehaviour
     private void DrawSquare(int x, int y)
     {
         Vector2Int directionOffset = GetPlayerDirectionVectorOffsets(x, y);
-
+        
         if (directionOffset.x >= 0 && directionOffset.y >= 0
                                   && directionOffset.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
                                   && directionOffset.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0))
         {
-            if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData.WALL)
+            int layerId;
+            switch (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x])
             {
-                int layerId = _atlasData.layers.Find(layer => layer.name == "wall").id;
-                DrawSideWalls(layerId - 1, x, y);
-                DrawFrontWalls(layerId - 1, x, y);
-            }
-            else if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData.TREASURE)
-            {
-                int layerId = _atlasData.layers.Find(layer => layer.name == "chest").id;
-                DrawObject(layerId - 1, x, y);
+                case DungeonData.WALL:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "wall").id;
+                    DrawSideWalls(layerId - 1, x, y);
+                    DrawFrontWalls(layerId - 1, x, y); 
+                    break;
+                case DungeonData.TREASURE: 
+                    layerId = _atlasData.layers.Find(layer => layer.name == "chest").id;
+                    DrawObject(layerId - 1, x, y);
+                    break;
+                case DungeonData.OXYGEN_REFILL:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "oxygen_refill").id;
+                    DrawObject(layerId-1, x, y);
+                    break;
             }
         }
     }

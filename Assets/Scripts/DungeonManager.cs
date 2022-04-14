@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,28 +20,40 @@ public class DungeonManager
             if (instance == null)
             {
                 instance = new DungeonManager();
-                instance.Initialize();
             }
             return instance;
         }
     }
 
-    private void Initialize()
+    public void Initialize()
     {
         _dungeonFloors = new List<DungeonFloor>();
         int i = 0;
         foreach (string[][] floor in DungeonData.InitialDungeonData)
         {
-            _dungeonFloors.Add(new DungeonFloor(floor, DungeonData.LadderData[i]));
+            string[][] copy = new string[floor.Length][];
+            for (int x = 0; x < floor.Length; x++)
+            {
+                copy[x] = floor[x].Clone() as string[];
+            }
+            
+            _dungeonFloors.Add(new DungeonFloor(copy, DungeonData.LadderData[i]));
             if (i < DungeonData.LadderData.Count - 1)
             {
                 i++;
             }
         }
         _currentFloor = _dungeonFloors[0];
+        _currentFloorIndex = 0;
         DungeonRenderer.Instance.RenderDungeon();
     }
 
+    public void Restart()
+    {
+        PlayerManager.Instance.Reset();
+        Initialize();
+        OnRestart?.Invoke();
+    }
     public void MoveUpFloor()
     {
         _currentFloorIndex--;
@@ -70,4 +83,6 @@ public class DungeonManager
         }
         DungeonRenderer.Instance.RenderDungeon();
     }
+
+    public Action OnRestart;
 }
