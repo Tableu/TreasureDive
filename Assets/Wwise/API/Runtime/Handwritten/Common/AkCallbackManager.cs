@@ -307,9 +307,9 @@ public static class AkCallbackManager
 										UnityEngine.GameObject;
 								if (obj != null)
 									msg += " (GameObject: " + obj + ")";
-
 								msg += " (Instance ID: " + AkMonitoringCallbackInfo.gameObjID + ")";
 							}
+
 
 							if (AkMonitoringCallbackInfo.errorLevel == AkMonitorErrorLevel.ErrorLevel_Error)
 								UnityEngine.Debug.LogError(msg);

@@ -8,29 +8,34 @@ public static class DungeonData
     public const int SOUTH = 2;
     public const int WEST = 3;
     
-    public const string EXIT = "exit";
-    public const string ENTRANCE = "entrance";
+    public const string EXIT = "exi";
+    public const string ENTRANCE = "ent";
     public const string WALL = "wll";
-    public const string EMPTY_SPACE = "empty";
-    public const string OXYGEN_REFILL = "oxy_refill";
-    public const string SPAWN_POINT = "spawn";
-    public const string HEALTH_UPGRADE = "health_up";
-    public const string HEALTH_REFILL = "health_refill";
-    public const string OXYGEN_UPGRADE = "oxy_up";
+    public const string EMPTY_SPACE = "emp";
+    public const string OXYGEN_REFILL = "o2r";
+    public const string SPAWN_POINT = "spn";
+    public const string HEALTH_UPGRADE = "hup";
+    public const string HEALTH_REFILL = "hre";
+    public const string OXYGEN_UPGRADE = "o2u";
+    public const string TREASURE = "tre";
     
     public static List<string[][]> InitialDungeonData = new List<string[][]>()
     {
         new[]
         {
-            new []{"empty", "wll", "wll", "empty"},
-            new []{"wll", "empty", "empty", "wll"},
-            new []{"wll", "empty", "spawn", "wll"},
-            new []{"empty", "wll", "wll", "empty"}
+            new []{"emp", "wll", "wll", "wll", "wll","wll", "wll","wll", "wll","emp"},
+            new []{"wll", "emp", "emp", "wll", "emp","emp", "emp","emp", "tre","wll"},
+            new []{"wll", "emp", "tre", "wll", "emp","emp", "emp","emp", "emp","wll"},
+            new []{"wll", "emp", "wll", "wll", "emp","emp", "emp","emp", "emp","wll"},
+            new []{"wll", "emp", "emp", "emp", "emp","wll", "emp","wll", "emp","wll"},
+            new []{"wll", "emp", "emp", "emp", "emp","wll", "emp","wll", "emp","wll"},
+            new []{"wll", "emp", "emp", "emp", "emp","wll", "o2r","wll", "tre","wll"},
+            new []{"emp", "wll", "wll", "wll", "wll","wll", "wll","wll", "wll","emp"}
         },
         new[]
         {
             new []{"wll", "wll", "wll", "wll"},
-            new []{"wll", "exit", "empty", "wll"},
+            new []{"wll", "exi", "empty", "wll"},
             new []{"wll", "empty", "empty", "wll"},
             new []{"wll", "wll", "wll", "wll"}
         }

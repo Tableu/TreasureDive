@@ -16,6 +16,9 @@ public class DungeonRenderer : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        #if UNITY_EDITOR
+        screenOffset = new Vector3(-0.75f, 0.56f, 0.5f);
+#endif
     }
 
     void Start()
@@ -62,13 +65,13 @@ public class DungeonRenderer : MonoBehaviour
         switch (PlayerManager.Instance.ViewDirectionOffset)
         {
             case DungeonData.SOUTH:
-                return new Vector2Int(position.x - x, position.y + z);
+                return new Vector2Int(position.x - x, position.y - z);
             case DungeonData.EAST:
-                return new Vector2Int(position.x + z, position.y + x);
+                return new Vector2Int(position.x - z, position.y + x);
             case DungeonData.NORTH:
-                return new Vector2Int(position.x + x, position.y - z);
+                return new Vector2Int(position.x + x, position.y + z);
             case DungeonData.WEST:
-                return new Vector2Int(position.x - z, position.y - x);
+                return new Vector2Int(position.x + z, position.y - x);
         }
 
         return new Vector2Int(0, 0);
@@ -77,22 +80,27 @@ public class DungeonRenderer : MonoBehaviour
     private void DrawSquare(int x, int y)
     {
         Vector2Int directionOffset = GetPlayerDirectionVectorOffsets(x, y);
-
+        
         if (directionOffset.x >= 0 && directionOffset.y >= 0
                                   && directionOffset.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
                                   && directionOffset.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0))
         {
-            if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData.WALL)
+            int layerId;
+            switch (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x])
             {
-                int layerId = _atlasData.layers.Find(layer => layer.name == "wall").id;
-                DrawSideWalls(layerId - 1, x, y);
-                DrawFrontWalls(layerId - 1, x, y);
-            }
-            else if (DungeonManager.Instance.CurrentFloor.Layout[directionOffset.y][directionOffset.x] is DungeonData
-                .HEALTH_REFILL)
-            {
-                int layerId = _atlasData.layers.Find(layer => layer.name == "object").id;
-                DrawObject(layerId - 1, x, y);
+                case DungeonData.WALL:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "wall").id;
+                    DrawSideWalls(layerId - 1, x, y);
+                    DrawFrontWalls(layerId - 1, x, y); 
+                    break;
+                case DungeonData.TREASURE: 
+                    layerId = _atlasData.layers.Find(layer => layer.name == "chest").id;
+                    DrawObject(layerId - 1, x, y);
+                    break;
+                case DungeonData.OXYGEN_REFILL:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "oxygen_refill").id;
+                    DrawObject(layerId-1, x, y);
+                    break;
             }
         }
     }
@@ -109,12 +117,12 @@ public class DungeonRenderer : MonoBehaviour
 
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y);
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y);
             }
         }
     }
@@ -129,12 +137,12 @@ public class DungeonRenderer : MonoBehaviour
             GameObject go = MakeQuad(tile);
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.01f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.01f);
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.01f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.01f);
             }
         }
     }
@@ -147,7 +155,7 @@ public class DungeonRenderer : MonoBehaviour
             if (tile != null)
             {
                 GameObject go = MakeQuad(tile);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.02f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.02f);
             }
         }
 
@@ -158,7 +166,7 @@ public class DungeonRenderer : MonoBehaviour
             {
                 GameObject go = MakeQuad(tile);
                 int tx = screenDimensions.x - tile.screen.x;
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -y+0.02f)) + screenOffset;
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.02f);
                 go.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
@@ -178,12 +186,12 @@ public class DungeonRenderer : MonoBehaviour
                     GameObject go = MakeQuad(tile);
                     if (bothSides)
                     {
-                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h, -z)) + screenOffset;
+                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-z+0.03f);
                     }
                     else
                     {
                         int tx = tile.screen.x + (x * tile.coords.w);
-                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h,-z)) + screenOffset;
+                        go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-z+0.03f);
                     }
                 }
             }

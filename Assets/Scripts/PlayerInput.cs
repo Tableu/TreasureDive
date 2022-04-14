@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,13 +10,33 @@ public class PlayerInput : MonoBehaviour
     {
         _playerInputActions = new PlayerInputActions();
         _playerInputActions.Enable();
+        _playerInputActions.Player.Restart.Disable();
     }
 
     private void Start()
     {
         _playerInputActions.Player.Move.started += OnMove;
         _playerInputActions.Player.Rotate.started += OnRotate;
+        _playerInputActions.Player.Restart.started += OnRestart;
+        StartCoroutine(LateStart());
+        PlayerManager.Instance.OnDeath += OnDeath;
+    }
+
+    private IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(1);
         DungeonManager dungeonManager = DungeonManager.Instance;
+        dungeonManager.Initialize();
+        StartCoroutine(PlayerManager.Instance.OxygenTimer());
+    }
+
+    private void OnRestart(InputAction.CallbackContext callbackContext)
+    {
+        _playerInputActions.Player.Move.Enable();
+        _playerInputActions.Player.Rotate.Enable();
+        _playerInputActions.Player.Restart.Disable();
+        DungeonManager.Instance.Restart();
+        StartCoroutine(PlayerManager.Instance.OxygenTimer());
     }
 
     private void OnMove(InputAction.CallbackContext callbackContext)
@@ -45,9 +66,19 @@ public class PlayerInput : MonoBehaviour
         PlayerManager.Instance.Rotate(direction);
     }
 
+    private void OnDeath()
+    {
+        _playerInputActions.Player.Move.Disable();
+        _playerInputActions.Player.Rotate.Disable();
+        _playerInputActions.Player.Restart.Enable();
+    }
     private void OnDestroy()
     {
         _playerInputActions.Player.Move.started -= OnMove;
         _playerInputActions.Player.Rotate.started -= OnRotate;
+        if (PlayerManager.Instance != null)
+        {
+            PlayerManager.Instance.OnDeath -= OnDeath;
+        }
     }
 }

@@ -20,24 +20,37 @@ public class PlayerManager
 
     private Vector2Int[] viewDirections = new[]
     {
-        new Vector2Int(0,1),
-        new Vector2Int(1,0),
         new Vector2Int(0,-1),
+        new Vector2Int(1,0),
+        new Vector2Int(0,1),
         new Vector2Int(-1,0)
     };
 
-    private int _viewDirection;
+    private int _viewDirection = 0;
 
-    public int Health;
-    public int MaxHealth;
+    public int Health = 5;
+    public int MaxHealth = 5;
 
-    public int Oxygen;
-    public int MaxOxygen;
+    public int Oxygen = 30;
+    public int MaxOxygen = 30;
 
-    public Vector2Int Position = new Vector2Int(2,2);
+    public int Treasure = 0;
+
+    public Vector2Int Position = new Vector2Int(1,1);
     public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
     public int ViewDirectionOffset => _viewDirection;
+    public float OxygenPercent => (float)Oxygen / (float)MaxOxygen;
 
+    public void Reset()
+    {
+        Health = 5;
+        MaxHealth = 5;
+        Oxygen = 30;
+        MaxOxygen = 30;
+        Treasure = 0;
+        Position = new Vector2Int(1, 1);
+        _viewDirection = 0;
+    }
     public bool Move(int direction)
     {
         direction = _viewDirection + direction;
