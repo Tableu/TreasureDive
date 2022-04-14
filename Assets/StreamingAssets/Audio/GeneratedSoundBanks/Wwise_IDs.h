@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID ITEM_PICKUP_SPECIAL_EVENT = 3200543478U;
         static const AkUniqueID PLAYER_BUBBLES_EVENT = 2414643299U;
         static const AkUniqueID PLAYER_DAMAGE_EVENT = 3723058631U;
+        static const AkUniqueID PLAYER_DEATH_EVENT = 2981734192U;
         static const AkUniqueID PLAYER_FIRE_EVENT = 3138598136U;
         static const AkUniqueID PLAYER_O2_LOW_EVENT = 4109590416U;
         static const AkUniqueID UI_BACK_EVENT = 73961094U;
