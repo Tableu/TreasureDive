@@ -56,7 +56,8 @@ public class PlayerInput : MonoBehaviour
         {
             PlayerManager.Instance.Move(DungeonData.NORTH);
         }
-        AkSoundEngine.PostEvent("player_bubbles_event", gameObject);
+        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
+        AkSoundEngine.PostEvent("player_bubbles_event", wwiseObject);
     }
 
     private void OnRotate(InputAction.CallbackContext callbackContext)
@@ -68,6 +69,8 @@ public class PlayerInput : MonoBehaviour
 
     private void OnDeath()
     {
+        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
+        AkSoundEngine.PostEvent("player_death_event", wwiseObject);
         _playerInputActions.Player.Move.Disable();
         _playerInputActions.Player.Rotate.Disable();
         _playerInputActions.Player.Restart.Enable();

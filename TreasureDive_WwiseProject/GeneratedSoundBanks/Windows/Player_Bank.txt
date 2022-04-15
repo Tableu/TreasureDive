@@ -1,11 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2414643299	player_bubbles_event			\Default Work Unit\player\player_bubbles_event	
+	2981734192	player_death_event			\Default Work Unit\player\player_death_event	
 	3138598136	player_fire_event			\Default Work Unit\player\player_fire_event	
 	3723058631	player_damage_event			\Default Work Unit\player\player_damage_event	
 	4109590416	player_o2_low_event			\Default Work Unit\player\player_o2_low_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	96866420	player_bubbles_03	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles07_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Bubbles\player_bubbles_03		400756
+	109392155	player_death	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\O-Death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_death		1764064
 	199123367	player_o2_low	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\o2_low_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\player_o2_low		192064
 	207209370	player_bubbles_05	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Bubbles\player_bubbles_05		218944
 	583328492	player_bubbles_04	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player_Bubbles\player_bubbles_04		157956

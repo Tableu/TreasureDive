@@ -105,6 +105,8 @@ public class DungeonFloor
                     case DungeonData.TREASURE:
                         Debug.Log("Collected treasure!");
                         PlayerManager.Instance.Treasure += 100;
+                        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
+                        AkSoundEngine.PostEvent("item_pickup_special_event", wwiseObject);
                         _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                         break;
                     case DungeonData.EXIT:

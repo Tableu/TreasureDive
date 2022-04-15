@@ -94,7 +94,6 @@ public class PlayerManager
             Oxygen--;
             yield return new WaitForSeconds(1);
         }
-        
         OnDeath?.Invoke();
     }
 

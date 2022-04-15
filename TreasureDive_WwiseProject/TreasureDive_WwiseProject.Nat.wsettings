@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{CAFD939D-084A-4F6E-BB6B-8EA90DDDC9C5}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="A:\Library\Games\Dungeon Crawler Jam\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="A:\Games\TreasureDive\Assets\Audio\Music\"/>
 				<Property Name="Event Action List\{0C38C634-84A3-445F-A497-62969BC867EA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1A280DB1-CDFD-491A-B373-7E15488BE2B5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{29A07C6F-8489-4A13-A36B-8096036E4BCA}\x64_Expand States" Type="string" Value=""/>
@@ -18,6 +18,7 @@
 				<Property Name="Event Action List\{B1555B3C-B84A-46CE-80A3-2EDA0AE11D6A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B23AD39B-2537-4022-BC62-394315398BD2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BFF5D78F-6352-4481-9CF6-2D5464D9CDD9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CD25DF5B-B462-4402-ADC8-1643414C7D4C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D4D697DF-7615-4821-8AE8-9CE0ABCD5368}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -37,9 +38,9 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Mac"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="asz7Mqyu0U6GDlhT6L+ZyA=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="/YfoCAxTzUCYj15piYtIfez/7d1Unc5CtepuWZL790FxsrISohAARY7h/2NrknTqUNRqN5TKnkiMg/keCUC7YRRQDU7faApFn2r7trJbUlM="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="UNRqN5TKnkiMg/keCUC7Yf2H6AgMU81AmI9eaYmLSH1xsrISohAARY7h/2NrknTq7P/t3VSdzkK16m5Zkvv3QRRQDU7faApFn2r7trJbUlM="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="ubEESPtqrUu2AiSGv7LI9gEnFRr/////oOxhMbkY406x+bdt/Tq3/wEnFRr/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="oOxhMbkY406x+bdt/Tq3/wEnmh7/////ubEESPtqrUu2AiSGv7LI9gEnmh7/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>

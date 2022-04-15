@@ -89,7 +89,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3820128371" Language="SFX" Hash="350740567">
+		<SoundBank Id="3820128371" Language="SFX" Hash="78419491">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player_Bank</ObjectPath>
 			<ShortName>Player_Bank</ShortName>
 			<Path>Player_Bank.bnk</Path>
@@ -123,6 +123,14 @@
 						<File Id="687214110" Language="SFX">
 							<ShortName>playerDamage01.wav</ShortName>
 							<Path>SFX\playerDamage01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2981734192" Name="player_death_event" ObjectPath="\Events\Default Work Unit\player\player_death_event" DurationType="OneShot" DurationMin="10." DurationMax="10.">
+					<IncludedMemoryFiles>
+						<File Id="109392155" Language="SFX">
+							<ShortName>O-Death.wav</ShortName>
+							<Path>SFX\O-Death_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -164,7 +172,7 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3999541165" Language="SFX" Hash="3006967843">
+		<SoundBank Id="3999541165" Language="SFX" Hash="3370139608">
 			<ObjectPath>\SoundBanks\Default Work Unit\Item_Bank</ObjectPath>
 			<ShortName>Item_Bank</ShortName>
 			<Path>Item_Bank.bnk</Path>
