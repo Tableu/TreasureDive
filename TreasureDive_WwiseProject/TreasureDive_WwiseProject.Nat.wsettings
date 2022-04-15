@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{CAFD939D-084A-4F6E-BB6B-8EA90DDDC9C5}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="A:\Games\TreasureDive\Assets\Audio\Music\"/>
+				<Property Name="Event Action List\{0807C365-957D-42F3-8BFC-6F9587E325D9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0C38C634-84A3-445F-A497-62969BC867EA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1A280DB1-CDFD-491A-B373-7E15488BE2B5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{29A07C6F-8489-4A13-A36B-8096036E4BCA}\x64_Expand States" Type="string" Value=""/>
@@ -17,6 +18,7 @@
 				<Property Name="Event Action List\{AB9C2C47-D5AF-4D69-A13A-BA85C992C88D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B1555B3C-B84A-46CE-80A3-2EDA0AE11D6A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B23AD39B-2537-4022-BC62-394315398BD2}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B731323D-72E9-4B54-AD44-93AE89C4508F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BFF5D78F-6352-4481-9CF6-2D5464D9CDD9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{CD25DF5B-B462-4402-ADC8-1643414C7D4C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D4D697DF-7615-4821-8AE8-9CE0ABCD5368}\x64_Expand States" Type="string" Value=""/>

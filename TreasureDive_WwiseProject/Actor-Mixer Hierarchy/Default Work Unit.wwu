@@ -411,6 +411,32 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</RandomSequenceContainer>
+						<Sound Name="env_music" ID="{25C908DE-DBF9-4D2F-850B-D98A29DC89EB}" ShortID="931130041">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3C15E3F6-5BE9-42DB-A8A6-A70FC127402A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74175B7B-058A-4803-94B5-4C1C8D5DA9FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Deep Adventure" ID="{5389AB53-AFED-4DB9-ABBA-B044EE4CB1CE}">
+									<Language>SFX</Language>
+									<AudioFile>Deep Adventure.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="244859413"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Deep Adventure" ID="{5389AB53-AFED-4DB9-ABBA-B044EE4CB1CE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>

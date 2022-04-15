@@ -88,6 +88,31 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="env_music_event" ID="{B731323D-72E9-4B54-AD44-93AE89C4508F}">
+							<ChildrenList>
+								<Action Name="" ID="{36E33881-FB4F-4A19-BD06-DB358C80B849}" ShortID="428610103">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="env_music" ID="{25C908DE-DBF9-4D2F-850B-D98A29DC89EB}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="env_music_stop_event" ID="{0807C365-957D-42F3-8BFC-6F9587E325D9}">
+							<ChildrenList>
+								<Action Name="" ID="{56AE7B9A-C1A0-47A1-A3A9-5EDAEF77D4A1}" ShortID="613584419">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="env_music" ID="{25C908DE-DBF9-4D2F-850B-D98A29DC89EB}" WorkUnitID="{D749588A-FDA6-4585-885B-FE0EF51D9888}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="items" ID="{4CE60D81-752E-4EDB-B5AD-E78F0C51A02C}" ShortID="651792389">

@@ -103,6 +103,8 @@ public class PlayerManager
 
     public IEnumerator Attack()
     {
+        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
+        AkSoundEngine.PostEvent("player_fire_event", wwiseObject);
         WeaponCooldown = WeaponMaxCooldown;
         var pos1 = Position + viewDirections[_viewDirection];
         var pos2 = Position + viewDirections[_viewDirection] * 2;
@@ -114,7 +116,7 @@ public class PlayerManager
         {
             if (DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] is DungeonData.SQUID)
             {
-                //AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
+                AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
                 DungeonManager.Instance.KillEnemy(pos1);
             }
             DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] = DungeonData.BUBBLES;
@@ -127,7 +129,7 @@ public class PlayerManager
         {
             if (DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] is DungeonData.SQUID)
             {
-                //AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
+                AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
                 DungeonManager.Instance.KillEnemy(pos2);
             }
             DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] = DungeonData.BUBBLES;
@@ -178,6 +180,10 @@ public class PlayerManager
         {
             Oxygen--;
             yield return new WaitForSeconds(1);
+        }
+        if (Oxygen == 10)
+        {
+            AkSoundEngine.PostEvent("player_o2_low_event", GameObject.Find("WwiseGlobal"));
         }
         OnDeath?.Invoke();
     }

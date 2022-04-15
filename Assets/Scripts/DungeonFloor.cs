@@ -42,6 +42,7 @@ public class DungeonFloor
             Debug.Log("Used a ladder entrance");
             PlayerManager.Instance.Position = ladder.Exit;
             DungeonManager.Instance.MoveDownFloor();
+            AkSoundEngine.PostEvent("player_bubbles_event", GameObject.Find("WwiseGlobal"));
             return true;
         }
 
@@ -56,6 +57,7 @@ public class DungeonFloor
             Debug.Log("Used a ladder exit");
             PlayerManager.Instance.Position = ladder.Entrance;
             DungeonManager.Instance.MoveUpFloor();
+            AkSoundEngine.PostEvent("player_bubbles_event", GameObject.Find("WwiseGlobal"));
             return true;
         }
 
