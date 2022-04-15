@@ -51,12 +51,17 @@ public static class DungeonData
         new[]
         {
             new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"},
-            new []{"wll", "emp", "o2r", "wll", "sqi", "emp", "wll", "emp", "ent", "wll"},
-            new []{"wll", "exi", "emp", "wll", "emp", "emp", "wll", "emp", "emp", "wll"},
+            new []{"wll", "exi", "o2r", "wll", "sqi", "emp", "wll", "emp", "ent", "wll"},
+            new []{"wll", "emp", "emp", "wll", "emp", "emp", "wll", "emp", "emp", "wll"},
             new []{"wll", "emp", "wll", "wll", "wll", "emp", "wll", "emp", "wll", "wll"},
             new []{"wll", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
             new []{"wll", "emp", "emp", "emp", "emp", "emp", "o2r", "emp", "emp", "wll"},
             new []{"wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll"}
+        },
+        new[]
+        {
+            new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"},
+            new []{"wll", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
         }
     };
 
