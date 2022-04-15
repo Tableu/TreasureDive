@@ -43,6 +43,7 @@ public class PlayerManager
     public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
     public int ViewDirectionOffset => _viewDirection;
     public float OxygenPercent => (float)Oxygen / (float)MaxOxygen;
+    public float HealthPercent => (float) Health / (float) MaxHealth;
     public float WeaponCooldownPercent => (float) WeaponCooldown / (float) WeaponMaxCooldown;
 
     public void Reset()
@@ -72,16 +73,82 @@ public class PlayerManager
         return false;
     }
 
-    public void Attack()
+    public void CheckForEnemies()
+    {
+        foreach (Vector2Int direction in viewDirections)
+        {
+            var edge = Position + direction;
+            if (edge.y >= 0 && edge.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
+                            && edge.x >= 0 && edge.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0)
+                            && DungeonManager.Instance.CurrentFloor.Layout[edge.y][edge.x] == DungeonData.SQUID)
+            {
+                Oxygen -= 10;
+                if (Oxygen == 0)
+                {
+                    OnDeath?.Invoke();
+                }
+            }
+        }
+        if (Position.y >= 0 && Position.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
+                        && Position.x >= 0 && Position.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0)
+                        && DungeonManager.Instance.CurrentFloor.Layout[Position.y][Position.x] == DungeonData.SQUID)
+        {
+            Oxygen -= 10;
+            if (Oxygen == 0)
+            {
+                OnDeath?.Invoke();
+            }
+        }
+    }
+
+    public IEnumerator Attack()
     {
         WeaponCooldown = WeaponMaxCooldown;
-        var pos = Position + viewDirections[_viewDirection];
-        if (DungeonManager.Instance.CurrentFloor.Layout[pos.y][pos.x] is DungeonData.SQUID)
+        var pos1 = Position + viewDirections[_viewDirection];
+        var pos2 = Position + viewDirections[_viewDirection] * 2;
+        if (pos1.x >= 0 && pos1.y >= 0
+                                   && pos1.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
+                                   && pos1.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0)
+                                   && (DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] is DungeonData.SQUID 
+                                       || DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] is DungeonData.EMPTY_SPACE))
         {
-            DungeonManager.Instance.CurrentFloor.Layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
-            AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
-            DungeonRenderer.Instance.RenderDungeon();
+            if (DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] is DungeonData.SQUID)
+            {
+                //AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
+                DungeonManager.Instance.KillEnemy(pos1);
+            }
+            DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] = DungeonData.BUBBLES;
         }
+        if (pos2.x >= 0 && pos2.y >= 0
+                              && pos2.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
+                              && pos2.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0) 
+                              && (DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] is DungeonData.SQUID
+                              || DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] is DungeonData.EMPTY_SPACE))
+        {
+            if (DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] is DungeonData.SQUID)
+            {
+                //AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
+                DungeonManager.Instance.KillEnemy(pos2);
+            }
+            DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] = DungeonData.BUBBLES;
+        }
+        DungeonRenderer.Instance.RenderDungeon();
+        yield return new WaitForSeconds(1);
+        if (pos1.x >= 0 && pos1.y >= 0
+                        && pos1.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
+                        && pos1.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0)
+                        && DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] == DungeonData.BUBBLES)
+        {
+            DungeonManager.Instance.CurrentFloor.Layout[pos1.y][pos1.x] = DungeonData.EMPTY_SPACE;
+        }
+        if (pos2.x >= 0 && pos2.y >= 0
+                        && pos2.y < DungeonManager.Instance.CurrentFloor.Layout.GetLength(0)
+                        && pos2.x < DungeonManager.Instance.CurrentFloor.Layout[0].GetLength(0)
+                        && DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] == DungeonData.BUBBLES)
+        {
+            DungeonManager.Instance.CurrentFloor.Layout[pos2.y][pos2.x] = DungeonData.EMPTY_SPACE;
+        }
+        DungeonRenderer.Instance.RenderDungeon();
     }
 
     public void Rotate(int direction)

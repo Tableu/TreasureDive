@@ -10,6 +10,7 @@ public class DungeonRenderer : MonoBehaviour
     [SerializeField]public Camera camera;
     [SerializeField]public Vector2Int screenDimensions;
     [SerializeField]public Vector3 screenOffset;
+    [SerializeField] public GameObject background;
 
     private JSONResult _atlasData;
 
@@ -42,14 +43,19 @@ public class DungeonRenderer : MonoBehaviour
         }
     }
 
+    public void InitializeDungeon()
+    {
+        DrawBackground(_atlasData.layers.Find(layer => layer.name == "ground").id - 1, "ground");
+        DrawBackground(_atlasData.layers.Find(layer => layer.name == "ceiling").id - 1, "ceiling");
+    }
+
     public void RenderDungeon()
     {
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
         }
-        DrawBackground(_atlasData.layers.Find(layer => layer.name == "ground").id - 1, "ground");
-        DrawBackground(_atlasData.layers.Find(layer => layer.name == "ceiling").id - 1, "ceiling");
+        
         for (int z = -_atlasData.depth; z <= 0; z++)
         {
             for (int x = -_atlasData.width; x <= _atlasData.width; x++)
@@ -111,6 +117,10 @@ public class DungeonRenderer : MonoBehaviour
                     break;
                 case DungeonData.SQUID:
                     layerId = _atlasData.layers.Find(layer => layer.name == "squid").id;
+                    DrawObject(layerId-1, x, y);
+                    break;
+                case DungeonData.BUBBLES:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "bubbles").id;
                     DrawObject(layerId-1, x, y);
                     break;
             }
@@ -196,6 +206,7 @@ public class DungeonRenderer : MonoBehaviour
                 if (tile != null)
                 {
                     GameObject go = MakeQuad(tile);
+                    go.transform.SetParent(background.transform);
                     if (bothSides)
                     {
                         go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-z+0.03f);

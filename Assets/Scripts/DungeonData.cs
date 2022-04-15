@@ -19,6 +19,7 @@ public static class DungeonData
     public const string OXYGEN_UPGRADE = "o2u";
     public const string TREASURE = "tre";
     public const string SQUID = "sqi";
+    public const string BUBBLES = "bub";
     
     public static List<string[][]> InitialDungeonData = new List<string[][]>()
     {

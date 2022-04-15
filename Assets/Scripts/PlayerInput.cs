@@ -74,7 +74,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (PlayerManager.Instance.WeaponCooldownPercent <= 0)
         {
-            PlayerManager.Instance.Attack();
+            StartCoroutine(PlayerManager.Instance.Attack());
             StartCoroutine(PlayerManager.Instance.WeaponTimer());
             AkSoundEngine.PostEvent("player_fire_event", wwiseObject);
         }

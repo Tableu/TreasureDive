@@ -5,6 +5,7 @@ using Slider = UnityEngine.UI.Slider;
 public class HUD : MonoBehaviour
 {
     public Slider oxygenBar;
+    public Slider healthBar;
     public Text treasureLabel;
     public RectTransform harpoonCooldown;
     [Header("Death Screen")] public Text scoreLabel;
@@ -22,6 +23,7 @@ public class HUD : MonoBehaviour
     private void Update()
     {
         oxygenBar.value = PlayerManager.Instance.OxygenPercent;
+        healthBar.value = PlayerManager.Instance.HealthPercent;
         harpoonCooldown.sizeDelta = new Vector2(harpoonCooldown.sizeDelta.x,
             harpoonHeight * PlayerManager.Instance.WeaponCooldownPercent);
         treasureLabel.text = PlayerManager.Instance.Treasure.ToString();
@@ -37,6 +39,7 @@ public class HUD : MonoBehaviour
     {
         deathScreen.SetActive(false);
         oxygenBar.value = 1;
+        healthBar.value = 1;
         treasureLabel.text = "0";
     }
 
