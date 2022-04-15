@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="430783581" Language="SFX" Hash="401459103">
+		<SoundBank Id="430783581" Language="SFX" Hash="2619311655">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment_Bank</ObjectPath>
 			<ShortName>Environment_Bank</ShortName>
 			<Path>Environment_Bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4010408255" Name="env_bubbles_event" ObjectPath="\Events\Default Work Unit\env_bubbles_event" DurationType="OneShot" DurationMin="0.369099" DurationMax="0.840434">
+				<Event Id="4010408255" Name="env_bubbles_event" ObjectPath="\Events\Default Work Unit\environment\env_bubbles_event" DurationType="OneShot" DurationMin="0.369099" DurationMax="0.840434">
 					<IncludedMemoryFiles>
 						<File Id="676645170" Language="SFX">
 							<ShortName>bubbles02.wav</ShortName>
@@ -38,17 +38,63 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="293283053">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3820128371" Language="SFX" Hash="2979540190">
+		<SoundBank Id="1839668536" Language="SFX" Hash="4093107641">
+			<ObjectPath>\SoundBanks\Default Work Unit\UI_Bank</ObjectPath>
+			<ShortName>UI_Bank</ShortName>
+			<Path>UI_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="73961094" Name="ui_back_event" ObjectPath="\Events\Default Work Unit\ui\ui_back_event" DurationType="OneShot" DurationMin="0.822896" DurationMax="0.822896">
+					<IncludedMemoryFiles>
+						<File Id="135620853" Language="SFX">
+							<ShortName>uiBack03.wav</ShortName>
+							<Path>SFX\uiBack03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2528159659" Name="ui_click_event" ObjectPath="\Events\Default Work Unit\ui\ui_click_event" DurationType="OneShot" DurationMin="0.310813" DurationMax="0.310813">
+					<IncludedMemoryFiles>
+						<File Id="253895743" Language="SFX">
+							<ShortName>uiClick06.wav</ShortName>
+							<Path>SFX\uiClick06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3667070125" Name="ui_hover_event" ObjectPath="\Events\Default Work Unit\ui\ui_hover_event" DurationType="OneShot" DurationMin="0.087438" DurationMax="0.087438">
+					<IncludedMemoryFiles>
+						<File Id="699328467" Language="SFX">
+							<ShortName>UI_Hover.wav</ShortName>
+							<Path>SFX\UI_Hover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3137872592" Language="SFX" Hash="642025137">
+			<ObjectPath>\SoundBanks\Default Work Unit\Enemy_Bank</ObjectPath>
+			<ShortName>Enemy_Bank</ShortName>
+			<Path>Enemy_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2736226020" Name="enemy_damage_event" ObjectPath="\Events\Default Work Unit\enemy\enemy_damage_event" MaxAttenuation="10." DurationType="OneShot" DurationMin="0.850042" DurationMax="0.850042">
+					<IncludedMemoryFiles>
+						<File Id="349851335" Language="SFX">
+							<ShortName>enemy_damage.wav</ShortName>
+							<Path>SFX\enemy_damage_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3820128371" Language="SFX" Hash="78419491">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player_Bank</ObjectPath>
 			<ShortName>Player_Bank</ShortName>
 			<Path>Player_Bank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2414643299" Name="player_bubbles_event" ObjectPath="\Events\Default Work Unit\player_bubbles_event" DurationType="OneShot" DurationMin="0.822354" DurationMax="2.086937">
+				<Event Id="2414643299" Name="player_bubbles_event" ObjectPath="\Events\Default Work Unit\player\player_bubbles_event" DurationType="OneShot" DurationMin="0.822354" DurationMax="2.086937">
 					<IncludedMemoryFiles>
 						<File Id="96866420" Language="SFX">
 							<ShortName>bubbles07.wav</ShortName>
@@ -69,6 +115,89 @@
 						<File Id="688931879" Language="SFX">
 							<ShortName>bubbles06.wav</ShortName>
 							<Path>SFX\bubbles06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3723058631" Name="player_damage_event" ObjectPath="\Events\Default Work Unit\player\player_damage_event" DurationType="OneShot" DurationMin="0.825729" DurationMax="0.825729">
+					<IncludedMemoryFiles>
+						<File Id="687214110" Language="SFX">
+							<ShortName>playerDamage01.wav</ShortName>
+							<Path>SFX\playerDamage01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2981734192" Name="player_death_event" ObjectPath="\Events\Default Work Unit\player\player_death_event" DurationType="OneShot" DurationMin="10." DurationMax="10.">
+					<IncludedMemoryFiles>
+						<File Id="109392155" Language="SFX">
+							<ShortName>O-Death.wav</ShortName>
+							<Path>SFX\O-Death_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3138598136" Name="player_fire_event" ObjectPath="\Events\Default Work Unit\player\player_fire_event" DurationType="OneShot" DurationMin="1.16325" DurationMax="2.086937">
+					<IncludedMemoryFiles>
+						<File Id="96866420" Language="SFX">
+							<ShortName>bubbles07.wav</ShortName>
+							<Path>SFX\bubbles07_10C4C929.wem</Path>
+						</File>
+						<File Id="207209370" Language="SFX">
+							<ShortName>bubbles10.wav</ShortName>
+							<Path>SFX\bubbles10_10C4C929.wem</Path>
+						</File>
+						<File Id="583328492" Language="SFX">
+							<ShortName>bubbles09.wav</ShortName>
+							<Path>SFX\bubbles09_10C4C929.wem</Path>
+						</File>
+						<File Id="592969275" Language="SFX">
+							<ShortName>harpoon04.wav</ShortName>
+							<Path>SFX\harpoon04_10C4C929.wem</Path>
+						</File>
+						<File Id="651692968" Language="SFX">
+							<ShortName>bubbles05.wav</ShortName>
+							<Path>SFX\bubbles05_10C4C929.wem</Path>
+						</File>
+						<File Id="688931879" Language="SFX">
+							<ShortName>bubbles06.wav</ShortName>
+							<Path>SFX\bubbles06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4109590416" Name="player_o2_low_event" ObjectPath="\Events\Default Work Unit\player\player_o2_low_event" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="199123367" Language="SFX">
+							<ShortName>o2_low.wav</ShortName>
+							<Path>SFX\o2_low_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3999541165" Language="SFX" Hash="3370139608">
+			<ObjectPath>\SoundBanks\Default Work Unit\Item_Bank</ObjectPath>
+			<ShortName>Item_Bank</ShortName>
+			<Path>Item_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3191969758" Name="item_pickup_event" ObjectPath="\Events\Default Work Unit\items\item_pickup_event" DurationType="OneShot" DurationMin="0.751146" DurationMax="0.751146">
+					<IncludedMemoryFiles>
+						<File Id="271350501" Language="SFX">
+							<ShortName>itemPickupGeneral01.wav</ShortName>
+							<Path>SFX\itemPickupGeneral01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1535481236" Name="item_pickup_o2_event" ObjectPath="\Events\Default Work Unit\items\item_pickup_o2_event" DurationType="OneShot" DurationMin="1.797625" DurationMax="1.797625">
+					<IncludedMemoryFiles>
+						<File Id="974046477" Language="SFX">
+							<ShortName>o2Pickup.wav</ShortName>
+							<Path>SFX\o2Pickup_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3200543478" Name="item_pickup_special_event" ObjectPath="\Events\Default Work Unit\items\item_pickup_special_event" DurationType="OneShot" DurationMin="1.323229" DurationMax="1.323229">
+					<IncludedMemoryFiles>
+						<File Id="874000787" Language="SFX">
+							<ShortName>itemPickupGeneral03.wav</ShortName>
+							<Path>SFX\itemPickupGeneral03_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2736226020	enemy_damage_event			\Default Work Unit\enemy\enemy_damage_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	349851335	enemy_damage	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\enemy_damage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy\enemy_damage		163272
+

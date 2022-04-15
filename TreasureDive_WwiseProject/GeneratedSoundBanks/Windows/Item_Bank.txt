@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1535481236	item_pickup_o2_event			\Default Work Unit\items\item_pickup_o2_event	
+	3191969758	item_pickup_event			\Default Work Unit\items\item_pickup_event	
+	3200543478	item_pickup_special_event			\Default Work Unit\items\item_pickup_special_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	271350501	item_pickup	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\itemPickupGeneral01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\item_pickup		144284
+	874000787	item_pickup_special	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\itemPickupGeneral03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\item_pickup_special		254124
+	974046477	item_pickup_o2	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\o2Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Items\item_pickup_o2		345208
+

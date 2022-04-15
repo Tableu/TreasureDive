@@ -1,9 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	4010408255	env_bubbles_event			\Default Work Unit\env_bubbles_event	
+	4010408255	env_bubbles_event			\Default Work Unit\environment\env_bubbles_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	676645170	env_bubbles_02	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment_Bubbles\env_bubbles_02		89816
-	800572091	env_bubbles_01	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment_Bubbles\env_bubbles_01		141172
-	868123595	env_bubbles_04	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment_Bubbles\env_bubbles_04		161148
-	869581343	env_bubbles_03	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment_Bubbles\env_bubbles_03		70972
+	676645170	env_bubbles_02	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_02		89816
+	800572091	env_bubbles_01	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_01		141172
+	868123595	env_bubbles_04	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_04		161148
+	869581343	env_bubbles_03	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_03		70972
 
