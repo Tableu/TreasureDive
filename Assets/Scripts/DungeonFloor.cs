@@ -94,7 +94,7 @@ public class DungeonFloor
                         break;
                     case DungeonData.OXYGEN_REFILL:
                         Debug.Log("Refilled oxygen!");
-                        PlayerManager.Instance.Oxygen += 10;
+                        PlayerManager.Instance.Oxygen = PlayerManager.Instance.MaxOxygen;
                         if (PlayerManager.Instance.Oxygen > PlayerManager.Instance.MaxOxygen)
                         {
                             PlayerManager.Instance.Oxygen = PlayerManager.Instance.MaxOxygen;

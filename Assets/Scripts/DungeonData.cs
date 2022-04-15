@@ -26,20 +26,37 @@ public static class DungeonData
         new[]
         {
             new []{"emp", "wll", "wll", "wll", "wll","wll", "wll","wll", "wll","emp"},
-            new []{"wll", "emp", "emp", "wll", "emp","emp", "emp","emp", "tre","wll"},
+            new []{"wll", "emp", "emp", "wll", "emp","emp", "o2r","emp", "emp","wll"},
             new []{"wll", "emp", "tre", "wll", "emp","emp", "emp","emp", "emp","wll"},
             new []{"wll", "emp", "wll", "wll", "emp","emp", "emp","ent", "emp","wll"},
+            new []{"wll", "emp", "emp", "o2r", "emp","wll", "emp","wll", "emp","wll"},
             new []{"wll", "emp", "emp", "emp", "emp","wll", "emp","wll", "emp","wll"},
-            new []{"wll", "emp", "emp", "emp", "emp","wll", "emp","wll", "emp","wll"},
-            new []{"wll", "emp", "emp", "emp", "sqi","wll", "o2r","wll", "tre","wll"},
+            new []{"wll", "emp", "emp", "emp", "sqi","wll", "tre","wll", "tre","wll"},
             new []{"emp", "wll", "wll", "wll", "wll","wll", "wll","wll", "wll","emp"}
         },
         new[]
         {
-            new []{"wll", "wll", "wll", "wll"},
-            new []{"wll", "exi", "empty", "wll"},
-            new []{"wll", "empty", "empty", "wll"},
-            new []{"wll", "wll", "wll", "wll"}
+            new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"},
+            new []{"wll", "exi", "emp", "emp", "emp", "emp", "emp", "sqi", "tre", "wll"},
+            new []{"wll", "o2r", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
+            new []{"wll", "wll", "wll", "wll", "emp", "emp", "wll", "wll", "wll", "wll"},
+            new []{"wll", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
+            new []{"wll", "emp", "wll", "emp", "wll", "wll", "wll", "emp", "wll", "wll"},
+            new []{"wll", "wll", "wll", "emp", "wll", "tre", "wll", "emp", "emp", "wll"},
+            new []{"wll", "ent", "wll", "emp", "wll", "o2r", "wll", "wll", "emp", "wll"},
+            new []{"wll", "emp", "wll", "emp", "wll", "emp", "wll", "emp", "emp", "wll"},
+            new []{"wll", "emp", "emp", "emp", "wll", "emp", "emp", "emp", "wll", "wll"},
+            new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"}
+        },
+        new[]
+        {
+            new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"},
+            new []{"wll", "emp", "o2r", "wll", "sqi", "emp", "wll", "emp", "ent", "wll"},
+            new []{"wll", "exi", "emp", "wll", "emp", "emp", "wll", "emp", "emp", "wll"},
+            new []{"wll", "emp", "wll", "wll", "wll", "emp", "wll", "emp", "wll", "wll"},
+            new []{"wll", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
+            new []{"wll", "emp", "emp", "emp", "emp", "emp", "o2r", "emp", "emp", "wll"},
+            new []{"wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll"}
         }
     };
 
@@ -48,6 +65,10 @@ public static class DungeonData
         new[]
         {
             new Ladder() {Entrance = new Vector2Int(7,3), Exit = new Vector2Int(1,1)}
+        },
+        new []
+        {
+            new Ladder(){Entrance = new Vector2Int(1, 7), Exit = new Vector2Int(1,2)}
         }
     };
 
