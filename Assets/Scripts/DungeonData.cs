@@ -61,7 +61,17 @@ public static class DungeonData
         new[]
         {
             new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"},
+            new []{"wll", "sqi", "emp", "emp", "emp", "emp", "o2r", "emp", "exi", "wll"},
+            new []{"wll", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "o2r", "wll"},
+            new []{"wll", "emp", "wll", "emp", "wll", "emp", "wll", "emp", "emp", "wll"},
+            new []{"wll", "tre", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
+            new []{"wll", "emp", "wll", "emp", "wll", "emp", "wll", "emp", "wll", "wll"},
+            new []{"wll", "emp", "emp", "emp", "o2r", "emp", "emp", "emp", "emp", "wll"},
+            new []{"wll", "emp", "wll", "emp", "wll", "emp", "wll", "emp", "wll", "wll"},
             new []{"wll", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "emp", "wll"},
+            new []{"wll", "sqi", "wll", "emp", "wll", "emp", "wll", "emp", "wll", "wll"},
+            new []{"wll", "tre", "sqi", "tre", "emp", "emp", "emp", "emp", "emp", "wll"},
+            new []{"emp", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "wll", "emp"}
         }
     };
 
@@ -74,6 +84,10 @@ public static class DungeonData
         new []
         {
             new Ladder(){Entrance = new Vector2Int(1, 7), Exit = new Vector2Int(1,2)}
+        },
+        new []
+        {
+            new Ladder(){Entrance = new Vector2Int(8, 1), Exit = new Vector2Int(8, 1)}
         }
     };
 

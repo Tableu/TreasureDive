@@ -132,6 +132,8 @@ public class DungeonManager : MonoBehaviour
                 }
             }
         }
+
+        yield return new WaitForSeconds(3);
         while (true)
         {
             for (var index = 0; index < enemyPos.Count; index++)
@@ -161,7 +163,7 @@ public class DungeonManager : MonoBehaviour
 
             PlayerManager.Instance.CheckForEnemies();
             DungeonRenderer.Instance.RenderDungeon();
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
         }
     }
 
