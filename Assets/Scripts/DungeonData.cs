@@ -18,6 +18,7 @@ public static class DungeonData
     public const string HEALTH_REFILL = "hre";
     public const string OXYGEN_UPGRADE = "o2u";
     public const string TREASURE = "tre";
+    public const string SQUID = "sqi";
     
     public static List<string[][]> InitialDungeonData = new List<string[][]>()
     {
@@ -26,10 +27,10 @@ public static class DungeonData
             new []{"emp", "wll", "wll", "wll", "wll","wll", "wll","wll", "wll","emp"},
             new []{"wll", "emp", "emp", "wll", "emp","emp", "emp","emp", "tre","wll"},
             new []{"wll", "emp", "tre", "wll", "emp","emp", "emp","emp", "emp","wll"},
-            new []{"wll", "emp", "wll", "wll", "emp","emp", "emp","emp", "emp","wll"},
+            new []{"wll", "emp", "wll", "wll", "emp","emp", "emp","ent", "emp","wll"},
             new []{"wll", "emp", "emp", "emp", "emp","wll", "emp","wll", "emp","wll"},
             new []{"wll", "emp", "emp", "emp", "emp","wll", "emp","wll", "emp","wll"},
-            new []{"wll", "emp", "emp", "emp", "emp","wll", "o2r","wll", "tre","wll"},
+            new []{"wll", "emp", "emp", "emp", "sqi","wll", "o2r","wll", "tre","wll"},
             new []{"emp", "wll", "wll", "wll", "wll","wll", "wll","wll", "wll","emp"}
         },
         new[]
@@ -45,7 +46,7 @@ public static class DungeonData
     {
         new[]
         {
-            new Ladder() {Entrance = new Vector2Int(2,1), Exit = new Vector2Int(1,1)}
+            new Ladder() {Entrance = new Vector2Int(7,3), Exit = new Vector2Int(1,1)}
         }
     };
 

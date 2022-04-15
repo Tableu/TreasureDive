@@ -101,6 +101,18 @@ public class DungeonRenderer : MonoBehaviour
                     layerId = _atlasData.layers.Find(layer => layer.name == "oxygen_refill").id;
                     DrawObject(layerId-1, x, y);
                     break;
+                case DungeonData.ENTRANCE:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "entrance").id;
+                    DrawObject(layerId-1, x, y);
+                    break;
+                case DungeonData.EXIT:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "exit").id;
+                    DrawObject(layerId-1, x, y);
+                    break;
+                case DungeonData.SQUID:
+                    layerId = _atlasData.layers.Find(layer => layer.name == "squid").id;
+                    DrawObject(layerId-1, x, y);
+                    break;
             }
         }
     }
@@ -117,12 +129,12 @@ public class DungeonRenderer : MonoBehaviour
 
             if (bothSides)
             {
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y);
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tile.screen.x + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.015f);
             }
             else
             {
                 int tx = tile.screen.x + (x * tile.coords.w);
-                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y);
+                go.transform.position = camera.ScreenToWorldPoint(new Vector3(tx + screenDimensions.x/2, screenDimensions.y-tile.screen.y-tile.coords.h)) + screenOffset + new Vector3(0,0,-y+0.015f);
             }
         }
     }

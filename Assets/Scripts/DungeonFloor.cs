@@ -99,14 +99,13 @@ public class DungeonFloor
                         {
                             PlayerManager.Instance.Oxygen = PlayerManager.Instance.MaxOxygen;
                         }
-
+                        AkSoundEngine.PostEvent("item_pickup_o2_event", GameObject.Find("WwiseGlobal"));
                         _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                         break;
                     case DungeonData.TREASURE:
                         Debug.Log("Collected treasure!");
                         PlayerManager.Instance.Treasure += 100;
-                        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
-                        AkSoundEngine.PostEvent("item_pickup_special_event", wwiseObject);
+                        AkSoundEngine.PostEvent("item_pickup_special_event", GameObject.Find("WwiseGlobal"));
                         _layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
                         break;
                     case DungeonData.EXIT:

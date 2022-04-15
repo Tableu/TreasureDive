@@ -6,11 +6,15 @@ public class HUD : MonoBehaviour
 {
     public Slider oxygenBar;
     public Text treasureLabel;
+    public RectTransform harpoonCooldown;
     [Header("Death Screen")] public Text scoreLabel;
     public GameObject deathScreen;
 
+    private float harpoonHeight;
+
     private void Start()
     {
+        harpoonHeight = harpoonCooldown.rect.height;
         PlayerManager.Instance.OnDeath += OnDeath;
         DungeonManager.Instance.OnRestart += OnRestart;
     }
@@ -18,6 +22,8 @@ public class HUD : MonoBehaviour
     private void Update()
     {
         oxygenBar.value = PlayerManager.Instance.OxygenPercent;
+        harpoonCooldown.sizeDelta = new Vector2(harpoonCooldown.sizeDelta.x,
+            harpoonHeight * PlayerManager.Instance.WeaponCooldownPercent);
         treasureLabel.text = PlayerManager.Instance.Treasure.ToString();
     }
 

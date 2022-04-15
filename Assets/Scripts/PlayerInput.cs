@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerInput : MonoBehaviour
 {
     private PlayerInputActions _playerInputActions;
+    private GameObject wwiseObject;
     private void Awake()
     {
         _playerInputActions = new PlayerInputActions();
@@ -18,8 +18,10 @@ public class PlayerInput : MonoBehaviour
         _playerInputActions.Player.Move.started += OnMove;
         _playerInputActions.Player.Rotate.started += OnRotate;
         _playerInputActions.Player.Restart.started += OnRestart;
+        _playerInputActions.Player.Attack.started += OnAttack;
         StartCoroutine(LateStart());
         PlayerManager.Instance.OnDeath += OnDeath;
+        wwiseObject = GameObject.Find("WwiseGlobal");
     }
 
     private IEnumerator LateStart()
@@ -33,6 +35,7 @@ public class PlayerInput : MonoBehaviour
     private void OnRestart(InputAction.CallbackContext callbackContext)
     {
         _playerInputActions.Player.Move.Enable();
+        _playerInputActions.Player.Attack.Enable();
         _playerInputActions.Player.Rotate.Enable();
         _playerInputActions.Player.Restart.Disable();
         DungeonManager.Instance.Restart();
@@ -56,7 +59,7 @@ public class PlayerInput : MonoBehaviour
         {
             PlayerManager.Instance.Move(DungeonData.NORTH);
         }
-        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
+        
         AkSoundEngine.PostEvent("player_bubbles_event", wwiseObject);
     }
 
@@ -67,12 +70,22 @@ public class PlayerInput : MonoBehaviour
         PlayerManager.Instance.Rotate(direction);
     }
 
+    private void OnAttack(InputAction.CallbackContext callbackContext)
+    {
+        if (PlayerManager.Instance.WeaponCooldownPercent <= 0)
+        {
+            PlayerManager.Instance.Attack();
+            StartCoroutine(PlayerManager.Instance.WeaponTimer());
+            AkSoundEngine.PostEvent("player_fire_event", wwiseObject);
+        }
+    }
+
     private void OnDeath()
     {
-        GameObject wwiseObject = GameObject.Find("WwiseGlobal");
         AkSoundEngine.PostEvent("player_death_event", wwiseObject);
         _playerInputActions.Player.Move.Disable();
         _playerInputActions.Player.Rotate.Disable();
+        _playerInputActions.Player.Attack.Disable();
         _playerInputActions.Player.Restart.Enable();
     }
     private void OnDestroy()

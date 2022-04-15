@@ -34,12 +34,16 @@ public class PlayerManager
     public int Oxygen = 30;
     public int MaxOxygen = 30;
 
+    public int WeaponCooldown = 0;
+    public int WeaponMaxCooldown = 3;
+
     public int Treasure = 0;
 
     public Vector2Int Position = new Vector2Int(1,1);
     public Vector2Int ViewDirection => viewDirections[_viewDirection%4];
     public int ViewDirectionOffset => _viewDirection;
     public float OxygenPercent => (float)Oxygen / (float)MaxOxygen;
+    public float WeaponCooldownPercent => (float) WeaponCooldown / (float) WeaponMaxCooldown;
 
     public void Reset()
     {
@@ -48,6 +52,8 @@ public class PlayerManager
         Oxygen = 30;
         MaxOxygen = 30;
         Treasure = 0;
+        WeaponCooldown = 0;
+        WeaponMaxCooldown = 3;
         Position = new Vector2Int(1, 1);
         _viewDirection = 0;
     }
@@ -64,6 +70,18 @@ public class PlayerManager
             return true;
         }
         return false;
+    }
+
+    public void Attack()
+    {
+        WeaponCooldown = WeaponMaxCooldown;
+        var pos = Position + viewDirections[_viewDirection];
+        if (DungeonManager.Instance.CurrentFloor.Layout[pos.y][pos.x] is DungeonData.SQUID)
+        {
+            DungeonManager.Instance.CurrentFloor.Layout[pos.y][pos.x] = DungeonData.EMPTY_SPACE;
+            AkSoundEngine.PostEvent("enemy_damage_event", GameObject.Find("WwiseGlobal"));
+            DungeonRenderer.Instance.RenderDungeon();
+        }
     }
 
     public void Rotate(int direction)
@@ -95,6 +113,16 @@ public class PlayerManager
             yield return new WaitForSeconds(1);
         }
         OnDeath?.Invoke();
+    }
+
+    public IEnumerator WeaponTimer()
+    {
+        yield return new WaitForSeconds(1);
+        while (WeaponCooldown > 0)
+        {
+            WeaponCooldown--;
+            yield return new WaitForSeconds(1);
+        }
     }
 
     public Action OnDeath;

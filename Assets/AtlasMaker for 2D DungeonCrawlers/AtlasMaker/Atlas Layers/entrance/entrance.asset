@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47caac738fc671440bd0bbdff89756f7, type: 3}
+  m_Name: entrance
+  m_EditorClassIdentifier: 
+  enabled: 1
+  model: {fileID: 7428707052801179367, guid: 864f21b9a6718424685679c61cc19877, type: 3}
+  id: entrance
+  type: 4
+  renderMode: 1
+  renderSide: 0
+  dungeonDepth: 0
+  dungeonWidth: 0

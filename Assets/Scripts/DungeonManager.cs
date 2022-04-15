@@ -66,6 +66,7 @@ public class DungeonManager
         {
             _currentFloorIndex++;
         }
+        //AkSoundEngine.PostEvent("env_bubbles_event", GameObject.Find("WwiseGlobal"));
         DungeonRenderer.Instance.RenderDungeon();
     }
 
@@ -81,6 +82,7 @@ public class DungeonManager
         {
             _currentFloorIndex--;
         }
+        //AkSoundEngine.PostEvent("env_bubbles_event", GameObject.Find("WwiseGlobal"));
         DungeonRenderer.Instance.RenderDungeon();
     }
 
