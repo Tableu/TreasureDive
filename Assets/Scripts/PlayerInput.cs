@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Start()
     {
+
         _playerInputActions.Player.Move.started += OnMove;
         _playerInputActions.Player.Rotate.started += OnRotate;
         _playerInputActions.Player.Restart.started += OnRestart;
@@ -28,12 +29,14 @@ public class PlayerInput : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         DungeonManager dungeonManager = DungeonManager.Instance;
+        AkSoundEngine.PostEvent("env_music_event", GameObject.Find("WwiseGlobal"));
         dungeonManager.Initialize();
         StartCoroutine(PlayerManager.Instance.OxygenTimer());
     }
 
     private void OnRestart(InputAction.CallbackContext callbackContext)
     {
+        AkSoundEngine.PostEvent("env_music_event", GameObject.Find("WwiseGlobal"));
         _playerInputActions.Player.Move.Enable();
         _playerInputActions.Player.Attack.Enable();
         _playerInputActions.Player.Rotate.Enable();
@@ -82,6 +85,7 @@ public class PlayerInput : MonoBehaviour
 
     private void OnDeath()
     {
+        AkSoundEngine.PostEvent("env_music_stop_event", GameObject.Find("WwiseGlobal"));
         AkSoundEngine.PostEvent("player_death_event", wwiseObject);
         _playerInputActions.Player.Move.Disable();
         _playerInputActions.Player.Rotate.Disable();

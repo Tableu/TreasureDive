@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID ENEMY_DAMAGE_EVENT = 2736226020U;
         static const AkUniqueID ENV_BUBBLES_EVENT = 4010408255U;
+        static const AkUniqueID ENV_MUSIC_EVENT = 2979887087U;
+        static const AkUniqueID ENV_MUSIC_STOP_EVENT = 2218366384U;
         static const AkUniqueID ITEM_PICKUP_EVENT = 3191969758U;
         static const AkUniqueID ITEM_PICKUP_O2_EVENT = 1535481236U;
         static const AkUniqueID ITEM_PICKUP_SPECIAL_EVENT = 3200543478U;

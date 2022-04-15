@@ -5,7 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="Environment_Bank" ID="{08E887FD-530C-40CD-988F-5E69898B487D}">
 					<ObjectInclusionList>
+						<ObjectRef Name="env_music_stop_event" ID="{0807C365-957D-42F3-8BFC-6F9587E325D9}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="env_bubbles_event" ID="{8E7F1208-72B7-443D-BF4E-D257267A6E8E}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="env_music_event" ID="{B731323D-72E9-4B54-AD44-93AE89C4508F}" WorkUnitID="{3F9677C7-F168-4E22-8080-F64A5270E741}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: a55a669c502ec747baac1543cb8f92fe
     GuidInternal: 
-    m_lastTime: -8585517878308266167
+    m_lastTime: -8585519942608105177
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 7b5b17748a05034894b54c1c8d5da9fc
     GuidInternal: 
-    m_lastTime: -8585516239016495107
+    m_lastTime: -8585517385002758954
     List:
     - name: Enemy_Bus
       guid: 817147dcfd093840b35adee22a6876b2
@@ -136,7 +136,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: da540589d8f83b42beb033c8b1c23497
     GuidInternal: 
-    m_lastTime: -8585516239016035262
+    m_lastTime: -8585515910905739021
     List:
     - name: Enemy_Bank
       guid: 50d46a3794ca9e488c83f91e0940bb61
@@ -220,7 +220,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c777963f68f1224e8080f64a5270e741
     GuidInternal: 
-    m_lastTime: -8585516239017414828
+    m_lastTime: -8585515911088161404
     List:
     - name: enemy
       guid: 46d71321e7c5b2409ee30721c35684d4
@@ -279,6 +279,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.840434
       minDuration: 0.369099
+    - name: env_music_event
+      guid: 3d3231b7e972544bad4493ae89c4508f
+      id: 2979887087
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: environment
+        ObjectType: 4
+        guid: 8454ea2cc630fc4aa54eb629e9deded2
+      - ElementName: env_music_event
+        ObjectType: 3
+        guid: 3d3231b7e972544bad4493ae89c4508f
+      Path: Events\Default Work Unit\environment\env_music_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: env_music_stop_event
+      guid: 65c307087d95f3428bfc6f9587e325d9
+      id: 2218366384
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c777963f68f1224e8080f64a5270e741
+      - ElementName: environment
+        ObjectType: 4
+        guid: 8454ea2cc630fc4aa54eb629e9deded2
+      - ElementName: env_music_stop_event
+        ObjectType: 3
+        guid: 65c307087d95f3428bfc6f9587e325d9
+      Path: Events\Default Work Unit\environment\env_music_stop_event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: environment
       guid: 8454ea2cc630fc4aa54eb629e9deded2
       id: 1229948536
@@ -579,7 +619,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 73cdb26cf2908f428e69b99321c4ef9f
     GuidInternal: 
-    m_lastTime: -8585517878309545754
+    m_lastTime: -8585519942606984925
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -593,7 +633,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 92aeec299ed38542af9134e72d9812f9
     GuidInternal: 
-    m_lastTime: -8585517878308326149
+    m_lastTime: -8585519942607174976
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -607,7 +647,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 74fa755935017a4094114084dedb5cc7
     GuidInternal: 
-    m_lastTime: -8585517878308326149
+    m_lastTime: -8585519942606774877
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -621,10 +661,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: f3b5321b6766fa4ba6adbc42ca9f0255
     GuidInternal: 
-    m_lastTime: -8585517878308276161
+    m_lastTime: -8585519942608195201
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 1300000014000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

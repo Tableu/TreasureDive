@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="430783581" Language="SFX" Hash="2619311655">
+		<SoundBank Id="430783581" Language="SFX" Hash="3267268506">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment_Bank</ObjectPath>
 			<ShortName>Environment_Bank</ShortName>
 			<Path>Environment_Bank.bnk</Path>
@@ -36,6 +36,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2979887087" Name="env_music_event" ObjectPath="\Events\Default Work Unit\environment\env_music_event" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="244859413" Language="SFX">
+							<ShortName>Deep Adventure.wav</ShortName>
+							<Path>SFX\Deep Adventure_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2218366384" Name="env_music_stop_event" ObjectPath="\Events\Default Work Unit\environment\env_music_stop_event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="293283053">

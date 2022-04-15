@@ -1,7 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
+	2218366384	env_music_stop_event			\Default Work Unit\environment\env_music_stop_event	
+	2979887087	env_music_event			\Default Work Unit\environment\env_music_event	
 	4010408255	env_bubbles_event			\Default Work Unit\environment\env_bubbles_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	244859413	env_music	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\Deep Adventure_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\env_music		13469554
 	676645170	env_bubbles_02	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_02		89816
 	800572091	env_bubbles_01	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_01		141172
 	868123595	env_bubbles_04	A:\Games\TreasureDive\TreasureDive_WwiseProject\.cache\Windows\SFX\bubbles04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Envrionment\Environment_Bubbles\env_bubbles_04		161148
